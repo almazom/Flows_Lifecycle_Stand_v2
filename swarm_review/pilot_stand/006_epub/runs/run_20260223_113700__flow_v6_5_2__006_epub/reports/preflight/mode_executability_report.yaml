@@ -1,0 +1,7 @@
+default_policy:
+  selected_mode: implementation
+  analysis_only_requires_explicit_opt_in: true
+analysis_only_explicit_opt_in: false
+mode_selected: implementation
+workers_available: true
+status: pass

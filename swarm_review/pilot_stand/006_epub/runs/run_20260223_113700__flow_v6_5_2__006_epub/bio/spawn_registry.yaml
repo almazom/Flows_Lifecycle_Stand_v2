@@ -1,0 +1,19 @@
+phase_1_expert_selection:
+  selected_domains:
+    - architecture_boundaries
+    - reliability_error_handling
+    - testing_ci_quality
+    - security_config_surface
+    - performance_concurrency
+    - maintainability_doc_debt
+  ranking_model: weighted_signal_coverage_v1
+  selection_rationale: "Top-6 by risk signal and criticality"
+  fallback_domains:
+    - data_integrity_schema
+    - release_gitflow_process
+    - ux_workflow_consistency
+entries: []
+parallel_dispatch_evidence:
+  dispatch_window_seconds: 0
+  all_6_dispatched_within_window: false
+  overlapping_runtime_pairs: 0

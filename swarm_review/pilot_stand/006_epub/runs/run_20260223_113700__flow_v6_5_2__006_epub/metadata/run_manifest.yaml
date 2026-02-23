@@ -1,0 +1,11 @@
+run_id: "run_20260223_113700__flow_v6_5_2__006_epub"
+flow: swarm_review
+flow_version: "6.5.2"
+selected_mode: implementation
+analysis_only_explicit_opt_in: false
+started_at_utc: "2026-02-23T08:38:04Z"
+target_project:
+  path: /home/pets/zoo/006_epub
+  repo: https://github.com/almazom/006_epub
+  branch: master
+  baseline_tag: pilot-baseline-2026-02-23

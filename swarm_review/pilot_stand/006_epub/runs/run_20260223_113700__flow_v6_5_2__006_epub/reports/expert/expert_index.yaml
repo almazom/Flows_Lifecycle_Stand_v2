@@ -1,0 +1,44 @@
+ranking_model: weighted_signal_coverage_v1
+selection_rationale: >
+  Domains ranked by observable risk signals (exception breadth, subprocess usage,
+  CI/test friction, complexity hotspots) and system criticality for end-to-end flow.
+selected_domains:
+  - architecture_boundaries
+  - reliability_error_handling
+  - testing_ci_quality
+  - security_config_surface
+  - performance_concurrency
+  - maintainability_doc_debt
+fallback_domains:
+  - data_integrity_schema
+  - release_gitflow_process
+  - ux_workflow_consistency
+candidates:
+  - domain: architecture_boundaries
+    score: 92
+    evidence_basis: ["large handler surface", "cross-module coupling"]
+  - domain: reliability_error_handling
+    score: 96
+    evidence_basis: ["457 broad exception handlers"]
+  - domain: testing_ci_quality
+    score: 90
+    evidence_basis: ["pytest import failure due to missing aiogram"]
+  - domain: security_config_surface
+    score: 88
+    evidence_basis: ["subprocess and shell integration points"]
+  - domain: performance_concurrency
+    score: 86
+    evidence_basis: ["async + subprocess mixed hot paths"]
+  - domain: maintainability_doc_debt
+    score: 84
+    evidence_basis: ["73 TODO/TBD/FIXME markers"]
+  - domain: data_integrity_schema
+    score: 73
+    evidence_basis: ["DB model evolution"]
+  - domain: release_gitflow_process
+    score: 68
+    evidence_basis: ["multi-branch operational complexity"]
+  - domain: ux_workflow_consistency
+    score: 66
+    evidence_basis: ["handler UX consistency debt"]
+exactly_six_selected: true

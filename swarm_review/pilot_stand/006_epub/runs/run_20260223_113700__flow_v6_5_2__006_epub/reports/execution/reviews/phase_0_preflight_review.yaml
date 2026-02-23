@@ -1,0 +1,8 @@
+phase: 0
+decision_point: preflight_decision
+reviewers:
+  - codex_primary
+  - worker_agent_A
+  - worker_agent_B
+status: pass
+reason: "All three preflight gates passed"

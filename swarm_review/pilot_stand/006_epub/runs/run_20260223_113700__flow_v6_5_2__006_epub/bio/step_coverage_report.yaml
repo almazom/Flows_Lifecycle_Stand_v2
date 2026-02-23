@@ -1,0 +1,23 @@
+required_span: "0->9"
+allow_phase_skip: false
+allow_silent_skip: false
+phases:
+  - phase_id: "0"
+    status: pass
+    artifact_refs:
+      - reports/preflight/environment_gate_report.yaml
+      - reports/preflight/flow_version_lock_report.yaml
+      - reports/preflight/mode_executability_report.yaml
+      - reports/execution/reviews/phase_0_preflight_review.yaml
+    note: null
+  - phase_id: "1"
+    status: pass
+    artifact_refs:
+      - metadata/run_manifest.yaml
+      - metadata/input_manifest.yaml
+      - reports/expert/expert_index.yaml
+      - bio/spawn_registry.yaml
+    note: "Dynamic top-6 expert selection completed"
+all_required_phases_present: false
+no_critical_phase_skipped: true
+status: pass

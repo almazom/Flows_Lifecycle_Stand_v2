@@ -1,0 +1,28 @@
+project_path: /home/pets/zoo/006_epub
+snapshot_utc: "2026-02-23T08:38:04Z"
+inventory:
+  total_files: 18402
+  python_files: 7465
+  markdown_files: 1144
+  yaml_files: 17
+  json_files: 343
+risk_signals:
+  broad_exception_handlers_in_code: 457
+  todo_tbd_fixme_markers_in_code_tests: 73
+  subprocess_or_shell_usage_markers: 128
+seed_inputs:
+  - /home/pets/zoo/006_epub/main.py
+  - /home/pets/zoo/006_epub/cli_bot.py
+  - /home/pets/zoo/006_epub/config.py
+  - /home/pets/zoo/006_epub/README.md
+  - /home/pets/zoo/006_epub/.github/workflows/ci.yml
+  - /home/pets/zoo/006_epub/tests/conftest.py
+  - /home/pets/zoo/006_epub/bot/handlers/navigation/summary/request.py
+  - /home/pets/zoo/006_epub/bot/handlers/common.py
+  - /home/pets/zoo/006_epub/core/book_search_service.py
+  - /home/pets/zoo/006_epub/core/translation/pipeline.py
+  - /home/pets/zoo/006_epub/core/vision_book_search_service.py
+  - /home/pets/zoo/006_epub/core/gemini_cli/client.py
+  - /home/pets/zoo/006_epub/core/summarizer/providers/gemini_cli_provider.py
+  - /home/pets/zoo/006_epub/db/crud.py
+  - /home/pets/zoo/006_epub/db/models/__init__.py
