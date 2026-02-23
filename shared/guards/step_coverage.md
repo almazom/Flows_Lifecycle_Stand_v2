@@ -27,6 +27,8 @@ allowed_statuses:
 
 rules:
   no_phase_with_missing_status: true
+  fail_when_all_required_phases_present_false: true
+  fail_when_no_critical_phase_skipped_false: true
   critical_phases_cannot_be_not_applicable: [0, 1, 2, 3, 4, 5, 6, 9]
   mode_dependent_phases: [8]   # phase_8 = not_applicable in analysis_only
 
@@ -57,9 +59,13 @@ step_coverage_report:
 
 - All phases 0-9 have explicit status
 - No critical phase is `not_applicable_by_mode`
+- `all_required_phases_present == true`
+- `no_critical_phase_skipped == true`
 - `status == pass`
 
 ## Fail
 
 - Any phase without status → fail
 - Critical phase silently skipped → fail
+- `all_required_phases_present == false` → fail
+- `no_critical_phase_skipped == false` → fail

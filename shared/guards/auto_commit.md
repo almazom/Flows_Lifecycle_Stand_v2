@@ -30,6 +30,9 @@ triggers:
       - if_changes:
           - git add .
           - git commit -m "Phase {N}: {description}"
+      - validate: commit_sha_regex ^[0-9a-f]{7,40}$
+      - block_if: commit_sha_pending
+      - block_if: non_canonical_phase_id
       - log: bio/commit_log.yaml
 
 phase_messages:
@@ -68,9 +71,13 @@ commit_trailer: |
 - `bio/commit_log.yaml` is non-empty at terminal
 - No uncommitted files at any phase boundary
 - `git status --porcelain` is empty immediately after each phase commit
+- Every phase id in commit log is canonical (`0`,`1`,`2`,`3`,`4a`,`4b`,`5`,`6`,`7`,`8`,`9`)
+- No `pending` SHA values at any passed phase
 
 ## Fail
 
 - Phase without commit → block_phase
 - File created but not committed → block_phase
 - Uncommitted at terminal → BLOCKED
+- Non-canonical combined phase id (e.g. `0-1`, `4a-4b`) → block_phase
+- Any `pending` SHA in passed phase → block_phase

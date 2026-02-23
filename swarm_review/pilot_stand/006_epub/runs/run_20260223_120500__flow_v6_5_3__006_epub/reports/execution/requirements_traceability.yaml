@@ -1,0 +1,20 @@
+traceability:
+  - finding: R2-P0-01
+    card: P0-01
+    implementation_files: [shared/guards/step_coverage.md, swarm_review/v6.5.4/START.md]
+  - finding: R2-P0-02
+    card: P0-02
+    implementation_files: [shared/guards/evidence_integrity.md]
+  - finding: R2-P0-03
+    card: P0-03
+    implementation_files: [shared/guards/quorum.md]
+  - finding: R2-P0-04
+    card: P1-04
+    implementation_files: [shared/guards/auto_commit.md]
+  - finding: R2-P1-02
+    card: P1-05
+    implementation_files: [shared/guards/requirements_backlog_traceability.md, swarm_review/v6.5.4/START.md]
+  - finding: R2-P1-04
+    card: P1-06
+    implementation_files: [swarm_review/v6.5.4/START.md]
+status: pass

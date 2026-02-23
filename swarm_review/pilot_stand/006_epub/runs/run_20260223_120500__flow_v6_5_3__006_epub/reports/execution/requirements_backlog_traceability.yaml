@@ -1,0 +1,22 @@
+backlog_mappings:
+  - finding_id: R2-P1-01
+    reason_deferred: "Needs runtime support for >=3 distinct producers"
+    target_run: run_20260223_124000__flow_v6_5_4__006_epub
+    owner: swarm_review_flow
+    status: planned
+  - finding_id: R2-P1-03
+    reason_deferred: "Needs generator refactor for source_findings sync"
+    target_run: run_20260223_124000__flow_v6_5_4__006_epub
+    owner: swarm_review_flow
+    status: planned
+  - finding_id: R2-P1-05
+    reason_deferred: "Needs strict enforcement rollout for legacy logs"
+    target_run: run_20260223_124000__flow_v6_5_4__006_epub
+    owner: swarm_review_flow
+    status: planned
+  - finding_id: R2-P2-01
+    reason_deferred: "Pilot doc sync in target project repo"
+    target_run: run_20260223_124000__flow_v6_5_4__006_epub
+    owner: pilot_repo
+    status: planned
+status: pass

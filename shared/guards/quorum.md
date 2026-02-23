@@ -46,6 +46,7 @@ agent_outputs: array[string]
 consolidated_verdict: string
 confidence_percent: integer
 classification: strict_parallel | strategy_variations
+quorum_met: boolean
 status: pass | fail
 ```
 

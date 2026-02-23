@@ -33,5 +33,8 @@ aggregation:
   stable_candidate: false
   formula: "mean(E01..E22) with P0 penalty"
   evidence_links_required: true
+  hard_gates:
+    - e14_min_3_agents_gate
+    - e20_auto_commit_per_phase
 
 notes: ""

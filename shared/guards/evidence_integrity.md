@@ -30,6 +30,7 @@ hard_rules:
 preflight_secret_gate:
   required: true
   block_on_detected_plaintext_secret: true
+  fail_if_detected_plaintext_secret_files_non_empty: true
 
 topology_rules:
   strict_parallel_min_distinct_producers: 3
