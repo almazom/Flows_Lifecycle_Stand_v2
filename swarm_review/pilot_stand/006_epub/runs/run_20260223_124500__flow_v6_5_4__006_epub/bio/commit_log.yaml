@@ -41,5 +41,5 @@ commits:
     message: "Phase 8: Implement final stable gates and cut v6.5.5 from run_20260223_124500"
   - phase: 9
     repo: /home/pets/Flows_Lifecycle_Stand_v2
-    commit_sha: cf7a607
+    commit_sha: 2573b4c
     message: "Phase 9: terminal stabilization and stable evidence for run_20260223_124500"
