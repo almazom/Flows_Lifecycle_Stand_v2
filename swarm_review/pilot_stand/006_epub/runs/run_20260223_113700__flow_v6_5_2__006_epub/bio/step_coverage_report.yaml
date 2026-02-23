@@ -18,6 +18,17 @@ phases:
       - reports/expert/expert_index.yaml
       - bio/spawn_registry.yaml
     note: "Dynamic top-6 expert selection completed"
+  - phase_id: "2"
+    status: pass
+    artifact_refs:
+      - reports/expert/architecture_boundaries/report.md
+      - reports/expert/reliability_error_handling/report.md
+      - reports/expert/testing_ci_quality/report.md
+      - reports/expert/security_config_surface/report.md
+      - reports/expert/performance_concurrency/report.md
+      - reports/expert/maintainability_doc_debt/report.md
+      - bio/spawn_registry.yaml
+    note: "6 expert reports collected with bounded parallel dispatch evidence"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass

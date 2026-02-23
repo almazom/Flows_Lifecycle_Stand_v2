@@ -12,8 +12,92 @@ phase_1_expert_selection:
     - data_integrity_schema
     - release_gitflow_process
     - ux_workflow_consistency
-entries: []
+entries:
+  - SUBAGENT: default
+    TASK_ID: run_20260223_113700_architecture_boundaries
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: architecture_boundaries
+    GOAL: "Find architecture boundary and coupling risks"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/architecture_boundaries/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-74fc-7fa2-b574-b3822fef28de"
+    spawned_at: "2026-02-23T11:38:30Z"
+    started_at: "2026-02-23T11:38:31Z"
+    finished_at: "2026-02-23T11:39:58Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_113700_reliability_error_handling
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: reliability_error_handling
+    GOAL: "Find reliability and exception handling risks"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/reliability_error_handling/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-7682-7202-804c-9568b7ca1378"
+    spawned_at: "2026-02-23T11:38:31Z"
+    started_at: "2026-02-23T11:38:31Z"
+    finished_at: "2026-02-23T11:42:03Z"
+  - SUBAGENT: default
+    TASK_ID: run_20260223_113700_testing_ci_quality
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: testing_ci_quality
+    GOAL: "Find CI and test reliability issues"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/testing_ci_quality/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-788f-7131-85c5-025773744be1"
+    spawned_at: "2026-02-23T11:38:31Z"
+    started_at: "2026-02-23T11:38:32Z"
+    finished_at: "2026-02-23T11:41:15Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_113700_security_config_surface
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: security_config_surface
+    GOAL: "Find security and config risks"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/security_config_surface/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-7a4b-7762-8528-9eff48e3e214"
+    spawned_at: "2026-02-23T11:38:32Z"
+    started_at: "2026-02-23T11:38:33Z"
+    finished_at: "2026-02-23T11:42:35Z"
+  - SUBAGENT: default
+    TASK_ID: run_20260223_113700_performance_concurrency
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: performance_concurrency
+    GOAL: "Find async performance and concurrency issues"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/performance_concurrency/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-7cc8-7ca0-8c19-53b93c13865f"
+    spawned_at: "2026-02-23T11:38:32Z"
+    started_at: "2026-02-23T11:38:33Z"
+    finished_at: "2026-02-23T11:40:46Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_113700_maintainability_doc_debt
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: maintainability_doc_debt
+    GOAL: "Find maintainability and documentation debt"
+    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/maintainability_doc_debt/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89a6-7e9d-7793-95a8-bb08cedac2c1"
+    spawned_at: "2026-02-23T11:38:33Z"
+    started_at: "2026-02-23T11:38:34Z"
+    finished_at: "2026-02-23T11:40:59Z"
 parallel_dispatch_evidence:
-  dispatch_window_seconds: 0
-  all_6_dispatched_within_window: false
-  overlapping_runtime_pairs: 0
+  dispatch_window_seconds: 3
+  all_6_dispatched_within_window: true
+  overlapping_runtime_pairs: 15
