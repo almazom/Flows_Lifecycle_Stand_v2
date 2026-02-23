@@ -1,0 +1,12 @@
+signals:
+  - signal: phase9_artifact_gap_detected
+    source: reports/execution/reviews/phase_8_implementation_review.yaml
+    resolved_by:
+      - reports/execution/reviews/phase_9_final_review.yaml
+      - reports/execution/final_terminal_report.ru.md
+  - signal: stable_registry_missing_reference
+    source: reports/quality/satisfaction_score.yaml
+    resolved_by:
+      - swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml
+      - swarm_review/pilot_stand/006_epub/STABLE_REGISTRY.md
+status: pass

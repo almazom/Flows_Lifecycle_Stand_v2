@@ -39,3 +39,15 @@ runs:
   stable_decision: not_stable
   evidence_ref: swarm_review/pilot_stand/006_epub/runs/run_20260223_120500__flow_v6_5_3__006_epub/reports/execution/final_terminal_report.ru.md
   notes: Run completed; improved contracts; still below stable threshold.
+- run_id: run_20260223_124500__flow_v6_5_4__006_epub
+  date_utc: '2026-02-23T13:05:00Z'
+  flow_version: v6.5.4
+  evolved_to: v6.5.5
+  run_type: full_cycle
+  status: completed
+  satisfaction: 96
+  confidence: 96
+  stable_candidate: true
+  stable_decision: stable
+  evidence_ref: swarm_review/pilot_stand/006_epub/runs/run_20260223_124500__flow_v6_5_4__006_epub/reports/execution/final_terminal_report.ru.md
+  notes: Full cycle completed, hard gates closed, stable threshold reached.

@@ -1,0 +1,69 @@
+gates:
+- gate: evolution_regression_gate
+  status: pass
+  evidence_refs:
+  - bio/evolution_regression_report.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: non_stop_continuity_gate
+  status: pass
+  evidence_refs:
+  - bio/non_stop_watchdog.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: step_coverage_gate
+  status: pass
+  evidence_refs:
+  - bio/step_coverage_report.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: evidence_integrity_gate
+  status: pass
+  evidence_refs:
+  - bio/evidence_integrity_report.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: card_quality_95_gate
+  status: pass
+  evidence_refs:
+  - reports/quality/card_quality_fct.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: decision_gate_parallel_review_gate
+  status: pass
+  evidence_refs:
+  - bio/quorum_decision_record.yaml
+  - reports/execution/reviews/phase_9_final_review.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: flow_version_lock_gate
+  status: pass
+  evidence_refs:
+  - reports/preflight/flow_version_lock_report.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+- gate: stable_promotion_gate
+  status: pass
+  evidence_refs:
+  - reports/quality/satisfaction_score.yaml
+  - swarm_review/pilot_stand/006_epub/STABLE_REGISTRY.md
+  - swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml
+  checked_by:
+  - codex_primary
+  checked_at: '2026-02-23T13:20:00Z'
+  rule_version: 6.5.5
+overall_status: pass

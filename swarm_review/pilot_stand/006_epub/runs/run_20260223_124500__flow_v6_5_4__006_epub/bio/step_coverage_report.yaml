@@ -42,6 +42,10 @@ phases:
     status: pass
     artifact_refs: [reports/execution/requirements_traceability.yaml, reports/execution/requirements_backlog_traceability.yaml, reports/execution/reviews/phase_8_implementation_review.yaml]
     note: "Implementation complete"
-all_required_phases_present: false
+  - phase_id: "9"
+    status: pass
+    artifact_refs: [reports/execution/final_terminal_report.ru.md, reports/execution/reviews/phase_9_final_review.yaml, reports/execution/gate_review_swarm_matrix.yaml]
+    note: "Terminal complete with stable decision"
+all_required_phases_present: true
 no_critical_phase_skipped: true
 status: pass

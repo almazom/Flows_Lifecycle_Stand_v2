@@ -1,0 +1,56 @@
+decisions:
+  - point_id: preflight_decision
+    phase_id: "0"
+    decision_question: "Is environment ready to run?"
+    input_artifacts: [reports/preflight/environment_gate_report.yaml, reports/preflight/flow_version_lock_report.yaml]
+    spawned_agents: [019c89d3-9615-7013-8158-2f53180f5dfb, 019c89d3-9779-7f11-85a6-db0339a37804, 019c89d3-9e47-7740-a7b5-b97a73f97082]
+    agent_outputs: [reports/execution/reviews/phase_0_preflight_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strict_parallel
+    quorum_met: true
+    status: pass
+  - point_id: fusion_decision
+    phase_id: "3"
+    decision_question: "Is P0/P1/P2 prioritization correct?"
+    input_artifacts: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml]
+    spawned_agents: [019c89e4-29fc-7333-8d1d-e963d762ad50, 019c89e4-3774-70f1-9e0a-69b71d8676d1, 019c89e4-2c27-71e3-bdf5-22fc6a4fbf01]
+    agent_outputs: [reports/execution/reviews/phase_3_fusion_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strict_parallel
+    quorum_met: true
+    status: pass
+  - point_id: quality_95_validation
+    phase_id: "5"
+    decision_question: "Do cards meet 95% FCT confidence?"
+    input_artifacts: [reports/quality/card_quality_fct.yaml]
+    spawned_agents: [019c89e5-76f0-7932-bac6-23f08ff0d56c, 019c89e5-7fa0-72d3-a405-48b002cdad09, 019c89e5-7891-7e93-9e97-807362bd593b]
+    agent_outputs: [reports/execution/reviews/phase_5_quality_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strict_parallel
+    quorum_met: true
+    status: pass
+  - point_id: implementation_decision
+    phase_id: "8"
+    decision_question: "Are all cards implemented correctly?"
+    input_artifacts: [reports/execution/requirements_traceability.yaml, reports/execution/requirements_backlog_traceability.yaml]
+    spawned_agents: [019c89e8-cd6a-77b0-b2f6-e3ec0a550d7a, 019c89e8-d02f-7c53-ba26-1fb88bbcf8ae, 019c89e6-b808-7e20-86c2-303ebcba7b7c]
+    agent_outputs: [reports/execution/reviews/phase_8_implementation_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strict_parallel
+    quorum_met: true
+    status: pass
+  - point_id: final_readiness_decision
+    phase_id: "9"
+    decision_question: "Is terminal state valid?"
+    input_artifacts: [reports/execution/gate_review_swarm_matrix.yaml, bio/step_coverage_report.yaml, reports/execution/reviews/phase_9_final_review.yaml]
+    spawned_agents: [019c8a0b-ff65-7b70-a82f-694b6f0156f5, 019c8a0c-0285-70e2-9b3c-c65dddf87ed1, 019c8a0c-04a6-73e3-bfdf-41162d536dc5]
+    agent_outputs: [reports/execution/reviews/phase_9_final_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strict_parallel
+    quorum_met: true
+    status: pass

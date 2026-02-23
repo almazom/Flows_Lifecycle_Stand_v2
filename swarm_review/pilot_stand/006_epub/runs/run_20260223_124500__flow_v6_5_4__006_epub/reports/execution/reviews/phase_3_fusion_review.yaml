@@ -1,6 +1,13 @@
 phase: 3
 decision_point: fusion_decision
-reviewers: [codex_primary, worker_agent_A, worker_agent_B]
+reviewers:
+  - 019c89e4-29fc-7333-8d1d-e963d762ad50
+  - 019c89e4-3774-70f1-9e0a-69b71d8676d1
+  - 019c89e4-2c27-71e3-bdf5-22fc6a4fbf01
+reviewer_outputs:
+  - "PASS: fusion artifacts consistent"
+  - "PASS: raw_to_dedup mapping complete"
+  - "PASS: no unlabeled fusion items"
 status: pass
 checks:
   raw_findings_mapped: true

@@ -28,6 +28,9 @@ entries:
   spawned_at: '2026-02-23T12:28:00Z'
   started_at: '2026-02-23T12:28:01Z'
   finished_at: '2026-02-23T12:28:34Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d3-9615-7013-8158-2f53180f5dfb
+  producer_instance_id: 019c89d3-9615-7013-8158-2f53180f5dfb
 - SUBAGENT: worker
   TASK_ID: run_20260223_124500_preflight_reviewer_2
   PHASE: '0'
@@ -44,6 +47,9 @@ entries:
   spawned_at: '2026-02-23T12:28:00Z'
   started_at: '2026-02-23T12:28:01Z'
   finished_at: '2026-02-23T12:28:26Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d3-9779-7f11-85a6-db0339a37804
+  producer_instance_id: 019c89d3-9779-7f11-85a6-db0339a37804
 - SUBAGENT: default
   TASK_ID: run_20260223_124500_preflight_reviewer_3
   PHASE: '0'
@@ -60,6 +66,9 @@ entries:
   spawned_at: '2026-02-23T12:28:01Z'
   started_at: '2026-02-23T12:28:02Z'
   finished_at: '2026-02-23T12:28:34Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d3-9e47-7740-a7b5-b97a73f97082
+  producer_instance_id: 019c89d3-9e47-7740-a7b5-b97a73f97082
 - SUBAGENT: default
   TASK_ID: run_20260223_124500_producer_counting_model
   PHASE: '2'
@@ -76,6 +85,9 @@ entries:
   spawned_at: '2026-02-23T12:32:00Z'
   started_at: '2026-02-23T12:32:01Z'
   finished_at: '2026-02-23T12:34:00Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-6a67-7bf0-ab78-6c77a183fd65
+  producer_instance_id: 019c89d5-6a67-7bf0-ab78-6c77a183fd65
 - SUBAGENT: worker
   TASK_ID: run_20260223_124500_gate_spawn_provenance
   PHASE: '2'
@@ -92,6 +104,9 @@ entries:
   spawned_at: '2026-02-23T12:32:00Z'
   started_at: '2026-02-23T12:32:01Z'
   finished_at: '2026-02-23T12:34:39Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-6c78-7bd1-a583-930d1099b051
+  producer_instance_id: 019c89d5-6c78-7bd1-a583-930d1099b051
 - SUBAGENT: default
   TASK_ID: run_20260223_124500_traceability_sync
   PHASE: '2'
@@ -108,6 +123,9 @@ entries:
   spawned_at: '2026-02-23T12:32:01Z'
   started_at: '2026-02-23T12:32:02Z'
   finished_at: '2026-02-23T12:33:38Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-6f30-7d42-914e-46b14326156b
+  producer_instance_id: 019c89d5-6f30-7d42-914e-46b14326156b
 - SUBAGENT: worker
   TASK_ID: run_20260223_124500_auto_commit_runtime_enforcement
   PHASE: '2'
@@ -124,6 +142,9 @@ entries:
   spawned_at: '2026-02-23T12:32:01Z'
   started_at: '2026-02-23T12:32:02Z'
   finished_at: '2026-02-23T12:34:24Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-70de-7611-88f1-7b5af5c681c5
+  producer_instance_id: 019c89d5-70de-7611-88f1-7b5af5c681c5
 - SUBAGENT: default
   TASK_ID: run_20260223_124500_stable_scoring_hard_gates
   PHASE: '2'
@@ -140,6 +161,9 @@ entries:
   spawned_at: '2026-02-23T12:32:02Z'
   started_at: '2026-02-23T12:32:03Z'
   finished_at: '2026-02-23T12:34:57Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-72f3-7b52-8043-7060b47bbc63
+  producer_instance_id: 019c89d5-72f3-7b52-8043-7060b47bbc63
 - SUBAGENT: worker
   TASK_ID: run_20260223_124500_final_readiness_consolidation
   PHASE: '2'
@@ -156,6 +180,294 @@ entries:
   spawned_at: '2026-02-23T12:32:02Z'
   started_at: '2026-02-23T12:32:03Z'
   finished_at: '2026-02-23T12:34:44Z'
+  engine_id: codex-gpt5
+  engine_session_id: 019c89d5-758e-77e0-89cd-5b135b47f745
+  producer_instance_id: 019c89d5-758e-77e0-89cd-5b135b47f745
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_3_fusion_reviewer_019c89e4
+  PHASE: '3'
+  BIO_CASTE: scout
+  ROLE: fusion_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e4-29fc-7333-8d1d-e963d762ad50
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e4-29fc-7333-8d1d-e963d762ad50
+  producer_instance_id: 019c89e4-29fc-7333-8d1d-e963d762ad50
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_3_fusion_reviewer_019c89e4
+  PHASE: '3'
+  BIO_CASTE: scout
+  ROLE: fusion_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e4-3774-70f1-9e0a-69b71d8676d1
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e4-3774-70f1-9e0a-69b71d8676d1
+  producer_instance_id: 019c89e4-3774-70f1-9e0a-69b71d8676d1
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_3_fusion_reviewer_019c89e4
+  PHASE: '3'
+  BIO_CASTE: scout
+  ROLE: fusion_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e4-2c27-71e3-bdf5-22fc6a4fbf01
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e4-2c27-71e3-bdf5-22fc6a4fbf01
+  producer_instance_id: 019c89e4-2c27-71e3-bdf5-22fc6a4fbf01
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_5_quality_reviewer_019c89e5
+  PHASE: '5'
+  BIO_CASTE: nurse
+  ROLE: quality_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e5-76f0-7932-bac6-23f08ff0d56c
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e5-76f0-7932-bac6-23f08ff0d56c
+  producer_instance_id: 019c89e5-76f0-7932-bac6-23f08ff0d56c
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_5_quality_reviewer_019c89e5
+  PHASE: '5'
+  BIO_CASTE: nurse
+  ROLE: quality_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e5-7fa0-72d3-a405-48b002cdad09
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e5-7fa0-72d3-a405-48b002cdad09
+  producer_instance_id: 019c89e5-7fa0-72d3-a405-48b002cdad09
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_5_quality_reviewer_019c89e5
+  PHASE: '5'
+  BIO_CASTE: nurse
+  ROLE: quality_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e5-7891-7e93-9e97-807362bd593b
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e5-7891-7e93-9e97-807362bd593b
+  producer_instance_id: 019c89e5-7891-7e93-9e97-807362bd593b
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_phase_8_implementation_reviewer_019c89e8
+  PHASE: '8'
+  BIO_CASTE: scout
+  ROLE: implementation_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e8-cd6a-77b0-b2f6-e3ec0a550d7a
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e8-cd6a-77b0-b2f6-e3ec0a550d7a
+  producer_instance_id: 019c89e8-cd6a-77b0-b2f6-e3ec0a550d7a
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_phase_8_implementation_reviewer_019c89e8
+  PHASE: '8'
+  BIO_CASTE: scout
+  ROLE: implementation_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e8-d02f-7c53-ba26-1fb88bbcf8ae
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e8-d02f-7c53-ba26-1fb88bbcf8ae
+  producer_instance_id: 019c89e8-d02f-7c53-ba26-1fb88bbcf8ae
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_phase_8_implementation_reviewer_019c89e6
+  PHASE: '8'
+  BIO_CASTE: scout
+  ROLE: implementation_reviewer
+  GOAL: Gate review evidence
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews
+  OUTPUT: summary
+  agent_id: 019c89e6-b808-7e20-86c2-303ebcba7b7c
+  engine_id: codex-gpt5
+  engine_session_id: 019c89e6-b808-7e20-86c2-303ebcba7b7c
+  producer_instance_id: 019c89e6-b808-7e20-86c2-303ebcba7b7c
+  spawned_at: '2026-02-23T12:35:00Z'
+  started_at: '2026-02-23T12:35:01Z'
+  finished_at: '2026-02-23T12:36:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_9_final_reviewer_019c8a03_f6ca
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Validate terminal gates and stable promotion readiness
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a03-f6ca-7b12-808c-e398627c4d30
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a03-f6ca-7b12-808c-e398627c4d30
+  producer_instance_id: 019c8a03-f6ca-7b12-808c-e398627c4d30
+  spawned_at: '2026-02-23T13:00:00Z'
+  started_at: '2026-02-23T13:00:01Z'
+  finished_at: '2026-02-23T13:05:30Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_phase_9_final_reviewer_019c8a03_f8ee
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Validate terminal gates and stable promotion readiness
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a03-f8ee-70e3-a5c1-99f7e0ce0732
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a03-f8ee-70e3-a5c1-99f7e0ce0732
+  producer_instance_id: 019c8a03-f8ee-70e3-a5c1-99f7e0ce0732
+  spawned_at: '2026-02-23T13:00:00Z'
+  started_at: '2026-02-23T13:00:01Z'
+  finished_at: '2026-02-23T13:05:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_9_final_reviewer_019c8a03_fae6
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Validate terminal gates and stable promotion readiness
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a03-fae6-74a1-bb9f-d415a04d221a
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a03-fae6-74a1-bb9f-d415a04d221a
+  producer_instance_id: 019c8a03-fae6-74a1-bb9f-d415a04d221a
+  spawned_at: '2026-02-23T13:00:01Z'
+  started_at: '2026-02-23T13:00:02Z'
+  finished_at: '2026-02-23T13:05:30Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_9_revalidation_reviewer_019c8a0b_ff65
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Re-validate final gates after blocker closure
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a0b-ff65-7b70-a82f-694b6f0156f5
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a0b-ff65-7b70-a82f-694b6f0156f5
+  producer_instance_id: 019c8a0b-ff65-7b70-a82f-694b6f0156f5
+  spawned_at: '2026-02-23T13:12:00Z'
+  started_at: '2026-02-23T13:12:01Z'
+  finished_at: '2026-02-23T13:18:00Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_phase_9_revalidation_reviewer_019c8a0c_0285
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Re-validate final gates after blocker closure
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a0c-0285-70e2-9b3c-c65dddf87ed1
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a0c-0285-70e2-9b3c-c65dddf87ed1
+  producer_instance_id: 019c8a0c-0285-70e2-9b3c-c65dddf87ed1
+  spawned_at: '2026-02-23T13:12:00Z'
+  started_at: '2026-02-23T13:12:01Z'
+  finished_at: '2026-02-23T13:18:00Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_phase_9_revalidation_reviewer_019c8a0c_04a6
+  PHASE: '9'
+  BIO_CASTE: nurse
+  ROLE: final_readiness_reviewer
+  GOAL: Re-validate final gates after blocker closure
+  INPUT_ARTIFACTS:
+  - run artifacts
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/execution/reviews/phase_9_final_review.yaml
+  OUTPUT: summary
+  agent_id: 019c8a0c-04a6-73e3-bfdf-41162d536dc5
+  engine_id: codex-gpt5
+  engine_session_id: 019c8a0c-04a6-73e3-bfdf-41162d536dc5
+  producer_instance_id: 019c8a0c-04a6-73e3-bfdf-41162d536dc5
+  spawned_at: '2026-02-23T13:12:01Z'
+  started_at: '2026-02-23T13:12:02Z'
+  finished_at: '2026-02-23T13:18:00Z'
 parallel_dispatch_evidence:
   dispatch_window_seconds: 2
   all_6_dispatched_within_window: true

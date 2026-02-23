@@ -1,8 +1,16 @@
 phase: 8
 decision_point: implementation_decision
-reviewers: [codex_primary, worker_agent_A, worker_agent_B]
+reviewers:
+  - 019c89e8-cd6a-77b0-b2f6-e3ec0a550d7a
+  - 019c89e8-d02f-7c53-ba26-1fb88bbcf8ae
+  - 019c89e6-b808-7e20-86c2-303ebcba7b7c
+reviewer_outputs:
+  - "PASS: SSOT statuses match card markdown statuses"
+  - "PASS: implementation review remains valid after sync"
+  - "PASS: all cards done and traceability artifacts pass"
 status: pass
 checks:
   all_cards_implemented: true
   traceability_complete: true
   backlog_traceability_present: true
+  ssot_card_status_sync: true

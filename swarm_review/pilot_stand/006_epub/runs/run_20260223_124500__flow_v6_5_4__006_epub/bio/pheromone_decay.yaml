@@ -1,0 +1,6 @@
+priority_decay:
+  applied: true
+  model: p0_persistent_p1_decay_p2_decay
+  cycle: run_20260223_124500
+notes:
+  - P0 gaps resolved in this run and promoted to stable candidate

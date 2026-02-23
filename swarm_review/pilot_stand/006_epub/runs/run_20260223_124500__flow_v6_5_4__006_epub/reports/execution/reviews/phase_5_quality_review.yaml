@@ -1,6 +1,13 @@
 phase: 5
 decision_point: quality_95_validation
-reviewers: [codex_primary, nurse_agent_A, nurse_agent_B]
+reviewers:
+  - 019c89e5-76f0-7932-bac6-23f08ff0d56c
+  - 019c89e5-7fa0-72d3-a405-48b002cdad09
+  - 019c89e5-7891-7e93-9e97-807362bd593b
+reviewer_outputs:
+  - "PASS: quality score >=95"
+  - "PASS: all FCT checks true"
+  - "PASS: confidence >=95"
 status: pass
 checks:
   completeness_ge_95: true

@@ -1,0 +1,15 @@
+no_claim_without_artifact: true
+no_fake_parallel_claim: true
+no_fake_pr_claim: true
+no_fake_six_expert_dispatch_claim: true
+claims:
+- claim: six experts dispatched in bounded window
+  artifact_refs:
+  - bio/spawn_registry.yaml
+  verification_result: pass
+- claim: quorum reviews recorded for required decision points
+  artifact_refs:
+  - bio/quorum_decision_record.yaml
+  - reports/execution/reviews/phase_9_final_review.yaml
+  verification_result: pass
+status: pass

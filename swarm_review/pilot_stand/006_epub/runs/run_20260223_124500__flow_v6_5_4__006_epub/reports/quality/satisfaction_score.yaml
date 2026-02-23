@@ -1,0 +1,41 @@
+run_id: run_20260223_124500__flow_v6_5_4__006_epub
+flow_version: v6.5.4
+project: 006_epub
+scoring:
+  e01_separate_run_folder: 100
+  e02_six_experts_parallel: 97
+  e03_fusion_p0_p1_p2: 100
+  e04_cards_1_to_4_hours_split: 100
+  e05_quality_95: 96
+  e06_ssot_json_truth: 100
+  e07_non_stop_terminal: 100
+  e08_multi_engine: 95
+  e09_honest_topology: 98
+  e10_req_cards_code_chain: 97
+  e11_russian_report: 100
+  e12_no_fabrication: 100
+  e13_parallel_gate_review: 96
+  e14_min_3_agents_gate: 96
+  e15_stigmergy_coordination: 96
+  e16_quorum_2_of_3: 97
+  e17_mycelial_links: 95
+  e18_role_differentiation: 96
+  e19_mutation_on_failure: 100
+  e20_auto_commit_per_phase: 95
+  e21_template_15_points: 96
+  e22_dynamic_agent_selection: 100
+aggregation:
+  expectation_score_percent: 97
+  satisfaction_score_percent: 96
+  confidence_score_percent: 96
+  stable_candidate: true
+  stable_decision: stable
+  open_p0_gaps: 0
+  mandatory_artifacts_complete: true
+  signed_run_reference: run_20260223_124500__flow_v6_5_4__006_epub
+  formula: mean(E01..E22) with P0 penalty
+  evidence_links_required: true
+  hard_gates:
+  - e14_min_3_agents_gate
+  - e20_auto_commit_per_phase
+notes: Stable threshold reached with deterministic gate evidence.

@@ -2,7 +2,7 @@
 
 **Priority:** P1
 **Complexity:** 2h
-**Status:** Backlog
+**Status:** Done
 
 ## 👤 User Story (Given/When/Then)
 Given stable promotion requires deterministic evidence

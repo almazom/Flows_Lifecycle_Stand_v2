@@ -1,0 +1,12 @@
+mutations:
+  - version_from: 6.5.4
+    version_to: 6.5.5
+    reason: "Final-gap hardening from run #3 fusion"
+    status: applied
+    implementation_refs:
+      - shared/guards/spawn_registry.md
+      - shared/guards/evidence_integrity.md
+      - shared/guards/mode_executability.md
+      - shared/guards/final_gate_matrix.md
+      - shared/guards/artifact_minimality.md
+      - swarm_review/v6.5.5/START.md
