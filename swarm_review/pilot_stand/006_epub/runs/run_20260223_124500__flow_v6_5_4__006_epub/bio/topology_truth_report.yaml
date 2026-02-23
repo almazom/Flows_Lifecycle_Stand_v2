@@ -1,4 +1,4 @@
-actual_distinct_producers: 24
+actual_distinct_producers: 27
 distinct_engine_session_pairs:
 - codex-gpt5::019c89d3-9615-7013-8158-2f53180f5dfb
 - codex-gpt5::019c89d3-9779-7f11-85a6-db0339a37804
@@ -24,6 +24,9 @@ distinct_engine_session_pairs:
 - codex-gpt5::019c8a0b-ff65-7b70-a82f-694b6f0156f5
 - codex-gpt5::019c8a0c-0285-70e2-9b3c-c65dddf87ed1
 - codex-gpt5::019c8a0c-04a6-73e3-bfdf-41162d536dc5
+- codex-gpt5::019c8a16-0cc5-7b22-96ab-2264cfdb85ff
+- codex-gpt5::019c8a16-0e6c-7692-904b-b1f648451d71
+- codex-gpt5::019c8a16-108d-7592-ad56-5bb0f5e94b4a
 classification: strict_parallel
 fabricated_claims_found: false
 strict_parallel_claim_allowed: true

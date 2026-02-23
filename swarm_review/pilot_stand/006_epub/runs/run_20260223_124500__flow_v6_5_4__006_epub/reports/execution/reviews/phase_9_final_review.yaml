@@ -1,13 +1,13 @@
 phase: 9
 decision_point: final_readiness_decision
 reviewers:
-  - 019c8a0b-ff65-7b70-a82f-694b6f0156f5
-  - 019c8a0c-0285-70e2-9b3c-c65dddf87ed1
-  - 019c8a0c-04a6-73e3-bfdf-41162d536dc5
+  - 019c8a16-0cc5-7b22-96ab-2264cfdb85ff
+  - 019c8a16-0e6c-7692-904b-b1f648451d71
+  - 019c8a16-108d-7592-ad56-5bb0f5e94b4a
 reviewer_outputs:
-  - "PASS: mandatory Phase 9 artifacts are now present and evidence-linked"
-  - "PASS: quorum registry, step coverage, and watchdog terminal state are consistent"
-  - "PASS: stable thresholds met with signed run reference and no open P0 gaps"
+  - "PASS: satisfaction/confidence 96/96, open_p0_gaps=0, mandatory_artifacts_complete=true"
+  - "PASS: final review status=pass, terminal_status=COMPLETE, overall_status=pass in gate matrix"
+  - "PASS: stable registry/index linkage and all mandatory core artifacts are present"
 status: pass
 terminal_status: COMPLETE
 limitations: []

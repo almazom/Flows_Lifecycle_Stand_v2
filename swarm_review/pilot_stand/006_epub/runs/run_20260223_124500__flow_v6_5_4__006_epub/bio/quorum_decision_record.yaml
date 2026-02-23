@@ -47,10 +47,10 @@ decisions:
     phase_id: "9"
     decision_question: "Is terminal state valid?"
     input_artifacts: [reports/execution/gate_review_swarm_matrix.yaml, bio/step_coverage_report.yaml, reports/execution/reviews/phase_9_final_review.yaml]
-    spawned_agents: [019c8a0b-ff65-7b70-a82f-694b6f0156f5, 019c8a0c-0285-70e2-9b3c-c65dddf87ed1, 019c8a0c-04a6-73e3-bfdf-41162d536dc5]
+    spawned_agents: [019c8a16-0cc5-7b22-96ab-2264cfdb85ff, 019c8a16-0e6c-7692-904b-b1f648451d71, 019c8a16-108d-7592-ad56-5bb0f5e94b4a]
     agent_outputs: [reports/execution/reviews/phase_9_final_review.yaml]
     consolidated_verdict: pass
-    confidence_percent: 96
+    confidence_percent: 95
     classification: strict_parallel
     quorum_met: true
     status: pass
