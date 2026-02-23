@@ -12,15 +12,12 @@ phases:
     note: "Dynamic expert selection focused on residual gaps"
   - phase_id: "2"
     status: pass
-    artifact_refs:
-      - reports/expert/quorum_parallelism/report.md
-      - reports/expert/evidence_integrity/report.md
-      - reports/expert/auto_commit_discipline/report.md
-      - reports/expert/worker_traceability/report.md
-      - reports/expert/gate_review_integrity/report.md
-      - reports/expert/stable_promotion_readiness/report.md
-      - bio/spawn_registry.yaml
+    artifact_refs: [reports/expert/quorum_parallelism/report.md, reports/expert/evidence_integrity/report.md, reports/expert/auto_commit_discipline/report.md, reports/expert/worker_traceability/report.md, reports/expert/gate_review_integrity/report.md, reports/expert/stable_promotion_readiness/report.md, bio/spawn_registry.yaml]
     note: "6 residual-gap expert reports collected"
+  - phase_id: "3"
+    status: pass
+    artifact_refs: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml, reports/execution/reviews/phase_3_fusion_review.yaml]
+    note: "Residual gaps fused and deduplicated"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass

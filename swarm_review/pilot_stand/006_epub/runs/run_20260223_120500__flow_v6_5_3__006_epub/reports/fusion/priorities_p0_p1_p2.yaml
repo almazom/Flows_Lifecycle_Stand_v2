@@ -1,0 +1,71 @@
+p0:
+  - id: R2-P0-01
+    title: step_coverage_false_pass_on_missing_required_phases
+    sources: [quorum_parallelism, evidence_integrity, stable_promotion_readiness, worker_traceability]
+    evidence:
+      - shared/guards/step_coverage.md:21
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_120500__flow_v6_5_3__006_epub/bio/step_coverage_report.yaml:23
+  - id: R2-P0-02
+    title: secret_gate_logic_passes_with_detected_plaintext_secret
+    sources: [evidence_integrity]
+    evidence:
+      - shared/guards/evidence_integrity.md:32
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_120500__flow_v6_5_3__006_epub/reports/preflight/secret_leak_gate_report.yaml:1
+  - id: R2-P0-03
+    title: quorum_gate_evidence_schema_not_auditable
+    sources: [quorum_parallelism, gate_review_integrity, evidence_integrity]
+    evidence:
+      - shared/guards/quorum.md:39
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/bio/quorum_decision_record.yaml:1
+  - id: R2-P0-04
+    title: auto_commit_pending_sha_allowed
+    sources: [auto_commit_discipline, evidence_integrity]
+    evidence:
+      - shared/guards/auto_commit.md:27
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_120500__flow_v6_5_3__006_epub/bio/commit_log.yaml:4
+
+p1:
+  - id: R2-P1-01
+    title: gate_reviewer_provenance_missing_in_spawn_registry
+    sources: [gate_review_integrity]
+    evidence:
+      - shared/agents/INDEX.md:75
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/bio/spawn_registry.yaml:18
+  - id: R2-P1-02
+    title: backlog_traceability_missing_for_non_implemented_findings
+    sources: [worker_traceability]
+    evidence:
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/reports/fusion/priorities_p0_p1_p2.yaml:140
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/reports/execution/requirements_traceability.yaml:1
+  - id: R2-P1-03
+    title: source_findings_lost_in_traceability_generation
+    sources: [worker_traceability]
+    evidence:
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/cards/card_plan.yaml:19
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/reports/execution/requirements_traceability.yaml:1
+  - id: R2-P1-04
+    title: card_status_drift_between_markdown_and_ssot
+    sources: [worker_traceability]
+    evidence:
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/cards/P0-01_secret_leak_preflight_gate.md:5
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/ssot/SSOT_KANBAN.json:17
+  - id: R2-P1-05
+    title: canonical_auto_commit_phase_labels_violated
+    sources: [auto_commit_discipline]
+    evidence:
+      - shared/guards/auto_commit.md:36
+      - swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/bio/commit_log.yaml:2
+
+p2:
+  - id: R2-P2-01
+    title: pilot_dod_missing_explicit_quorum_artifact_requirement
+    sources: [quorum_parallelism]
+    evidence:
+      - /home/pets/zoo/006_epub/docs/flow_pilot/GITFLOW_PILOT.md:5
+      - shared/guards/quorum.md:15
+
+mapping_completeness:
+  raw_findings_count: 24
+  deduplicated_issues_count: 10
+  raw_to_dedup_mapped: true
+status: pass
