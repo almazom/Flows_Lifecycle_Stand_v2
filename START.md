@@ -41,10 +41,11 @@ Flows_Lifecycle_Stand_v2/
 │   └── colony_memory/
 │
 ├── swarm_review/         ← Flow 1: 6-agent code review
-│   ├── current → v6.5.2/  ← Symlink to latest
+│   ├── current → v6.5.3/  ← Symlink to latest
 │   ├── v6.5/
 │   ├── v6.5.1/
 │   ├── v6.5.2/
+│   ├── v6.5.3/
 │   └── pilot_stand/       ← Pilot evolution bench (006_epub)
 │
 ├── feature_sdd/          ← Flow 2: Feature development (FUTURE)
@@ -60,7 +61,7 @@ Flows_Lifecycle_Stand_v2/
 
 | Flow | Purpose | Current Version |
 |------|---------|-----------------|
-| **swarm_review** | 6-agent code review, fusion, cards, implementation | v6.5.2 |
+| **swarm_review** | 6-agent code review, fusion, cards, implementation | v6.5.3 |
 | feature_sdd | Feature development (FUTURE) | - |
 | bug_arc | Bug analysis & fixing (FUTURE) | - |
 
@@ -71,9 +72,9 @@ Flows_Lifecycle_Stand_v2/
 ```
 Each flow has versions:
   swarm_review/
-  ├── current → v6.5.2/    ← Always points to latest
-  ├── v6.5.1/              ← Previous patch
-  └── v6.5.2/              ← Current patch
+  ├── current → v6.5.3/    ← Always points to latest
+  ├── v6.5.2/              ← Previous patch
+  └── v6.5.3/              ← Current patch
 
 Version format: MAJOR.MINOR.PATCH
   MAJOR = Breaking changes

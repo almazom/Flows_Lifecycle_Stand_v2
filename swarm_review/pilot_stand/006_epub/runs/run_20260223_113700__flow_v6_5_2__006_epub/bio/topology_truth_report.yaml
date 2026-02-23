@@ -1,0 +1,6 @@
+actual_distinct_producers: 2
+classification: strategy_variations
+fabricated_claims_found: false
+strict_parallel_claim_allowed: false
+phase2_six_expert_dispatch_verified: true
+phase2_dispatch_window_seconds: 3

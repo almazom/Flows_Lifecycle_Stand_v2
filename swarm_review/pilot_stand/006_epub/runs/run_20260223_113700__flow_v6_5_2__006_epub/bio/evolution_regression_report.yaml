@@ -1,0 +1,7 @@
+missing_locked_expectations: []
+step_coverage_status: pass
+non_stop_continuity: preserved
+no_fabricated_claims: true
+status: pass
+notes:
+  - "v6.5.3 adds guards, no locked expectation removed"

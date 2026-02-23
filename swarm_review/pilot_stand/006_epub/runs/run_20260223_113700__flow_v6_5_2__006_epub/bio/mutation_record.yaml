@@ -1,0 +1,5 @@
+mutations:
+  - version_from: 6.5.2
+    version_to: 6.5.3
+    reason: "pilot run gaps in preflight safety, profile fallback, satisfaction contract"
+    status: applied

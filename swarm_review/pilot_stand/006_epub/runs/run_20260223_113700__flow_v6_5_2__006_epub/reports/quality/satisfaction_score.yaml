@@ -1,0 +1,34 @@
+run_id: run_20260223_113700__flow_v6_5_2__006_epub
+flow_version: v6.5.2
+project: 006_epub
+scoring:
+  e01_separate_run_folder: 100
+  e02_six_experts_parallel: 95
+  e03_fusion_p0_p1_p2: 100
+  e04_cards_1_to_4_hours_split: 100
+  e05_quality_95: 95
+  e06_ssot_json_truth: 100
+  e07_non_stop_terminal: 100
+  e08_multi_engine: 70
+  e09_honest_topology: 95
+  e10_req_cards_code_chain: 95
+  e11_russian_report: 100
+  e12_no_fabrication: 100
+  e13_parallel_gate_review: 80
+  e14_min_3_agents_gate: 75
+  e15_stigmergy_coordination: 85
+  e16_quorum_2_of_3: 85
+  e17_mycelial_links: 70
+  e18_role_differentiation: 85
+  e19_mutation_on_failure: 95
+  e20_auto_commit_per_phase: 90
+  e21_template_15_points: 95
+  e22_dynamic_agent_selection: 100
+aggregation:
+  expectation_score_percent: 90
+  satisfaction_score_percent: 91
+  confidence_score_percent: 90
+  stable_candidate: false
+  formula: "mean(E01..E22) with P0 penalty"
+  evidence_links_required: true
+notes: "Strong progress, but still below stable threshold due topology/parallel gate maturity."

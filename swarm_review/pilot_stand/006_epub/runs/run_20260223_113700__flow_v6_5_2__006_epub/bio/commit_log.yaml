@@ -1,5 +1,37 @@
 commits:
-  - phase: 0
+  - phase: 0-1
     repo: /home/pets/Flows_Lifecycle_Stand_v2
-    commit_sha: pending
-    message: "Phase 0: Preflight ✓"
+    commit_sha: 0ab3da8
+    message: "Phase 0-1: Preflight + Bootstrap for run_20260223_113700"
+  - phase: 2
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: c3d88a4
+    message: "Phase 2: 6 scouts parallel reports for run_20260223_113700"
+  - phase: 3
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: 1be3516
+    message: "Phase 3: Fusion P0/P1/P2 for run_20260223_113700"
+  - phase: 4a-4b
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: bb32ca7
+    message: "Phase 4a-4b: Card analysis and card creation for run_20260223_113700"
+  - phase: 5
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: eb6e2e5
+    message: "Phase 5: FCT quality validation for run_20260223_113700"
+  - phase: 6
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: 83abcf1
+    message: "Phase 6: SSOT freeze for run_20260223_113700"
+  - phase: 7
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: 3760cf0
+    message: "Phase 7: Implementation readiness for run_20260223_113700"
+  - phase: 8
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: bd13425
+    message: "Phase 8: Implement flow improvements and cut v6.5.3 from run_20260223_113700"
+  - phase: 9
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: pending_after_phase9_commit
+    message: "Phase 9: COMPLETE_WITH_LIMITATIONS for run_20260223_113700"

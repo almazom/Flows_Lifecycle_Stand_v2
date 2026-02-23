@@ -1,18 +1,29 @@
 pilot_project:
-  name: "006_epub"
-  path: "/home/pets/zoo/006_epub"
-  repo: "https://github.com/almazom/006_epub"
-  baseline_tag: "pilot-baseline-2026-02-23"
-
+  name: 006_epub
+  path: /home/pets/zoo/006_epub
+  repo: https://github.com/almazom/006_epub
+  baseline_tag: pilot-baseline-2026-02-23
 runs:
-  - run_id: "bootstrap_2026-02-23"
-    date_utc: "2026-02-23T11:00:00Z"
-    flow_version: "setup"
-    run_type: "git_reset_and_stand_bootstrap"
-    status: "completed"
-    satisfaction: 100
-    confidence: 100
-    stable_candidate: false
-    stable_decision: "not_applicable"
-    evidence_ref: "swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml"
-    notes: "Git history reset, new repo created, pilot stand initialized."
+- run_id: bootstrap_2026-02-23
+  date_utc: '2026-02-23T11:00:00Z'
+  flow_version: setup
+  run_type: git_reset_and_stand_bootstrap
+  status: completed
+  satisfaction: 100
+  confidence: 100
+  stable_candidate: false
+  stable_decision: not_applicable
+  evidence_ref: swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml
+  notes: Git history reset, new repo created, pilot stand initialized.
+- run_id: run_20260223_113700__flow_v6_5_2__006_epub
+  date_utc: '2026-02-23T11:58:00Z'
+  flow_version: v6.5.2
+  evolved_to: v6.5.3
+  run_type: full_cycle
+  status: completed_with_limitations
+  satisfaction: 91
+  confidence: 90
+  stable_candidate: false
+  stable_decision: not_stable
+  evidence_ref: swarm_review/pilot_stand/006_epub/runs/run_20260223_113700__flow_v6_5_2__006_epub/reports/execution/final_terminal_report.ru.md
+  notes: Cycle complete, version evolved to v6.5.3, below stable threshold.

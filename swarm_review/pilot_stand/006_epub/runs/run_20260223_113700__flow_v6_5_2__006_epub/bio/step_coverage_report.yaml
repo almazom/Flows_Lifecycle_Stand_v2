@@ -4,37 +4,19 @@ allow_silent_skip: false
 phases:
   - phase_id: "0"
     status: pass
-    artifact_refs:
-      - reports/preflight/environment_gate_report.yaml
-      - reports/preflight/flow_version_lock_report.yaml
-      - reports/preflight/mode_executability_report.yaml
-      - reports/execution/reviews/phase_0_preflight_review.yaml
+    artifact_refs: [reports/preflight/environment_gate_report.yaml, reports/preflight/flow_version_lock_report.yaml, reports/preflight/mode_executability_report.yaml, reports/execution/reviews/phase_0_preflight_review.yaml]
     note: null
   - phase_id: "1"
     status: pass
-    artifact_refs:
-      - metadata/run_manifest.yaml
-      - metadata/input_manifest.yaml
-      - reports/expert/expert_index.yaml
-      - bio/spawn_registry.yaml
+    artifact_refs: [metadata/run_manifest.yaml, metadata/input_manifest.yaml, reports/expert/expert_index.yaml, bio/spawn_registry.yaml]
     note: "Dynamic top-6 expert selection completed"
   - phase_id: "2"
     status: pass
-    artifact_refs:
-      - reports/expert/architecture_boundaries/report.md
-      - reports/expert/reliability_error_handling/report.md
-      - reports/expert/testing_ci_quality/report.md
-      - reports/expert/security_config_surface/report.md
-      - reports/expert/performance_concurrency/report.md
-      - reports/expert/maintainability_doc_debt/report.md
-      - bio/spawn_registry.yaml
+    artifact_refs: [reports/expert/architecture_boundaries/report.md, reports/expert/reliability_error_handling/report.md, reports/expert/testing_ci_quality/report.md, reports/expert/security_config_surface/report.md, reports/expert/performance_concurrency/report.md, reports/expert/maintainability_doc_debt/report.md, bio/spawn_registry.yaml]
     note: "6 expert reports collected with bounded parallel dispatch evidence"
   - phase_id: "3"
     status: pass
-    artifact_refs:
-      - reports/fusion/fusion_report.md
-      - reports/fusion/priorities_p0_p1_p2.yaml
-      - reports/execution/reviews/phase_3_fusion_review.yaml
+    artifact_refs: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml, reports/execution/reviews/phase_3_fusion_review.yaml]
     note: "P0/P1/P2 fusion completed for all findings"
   - phase_id: "4a"
     status: pass
@@ -42,20 +24,11 @@ phases:
     note: "Card architecture analysis completed"
   - phase_id: "4b"
     status: pass
-    artifact_refs:
-      - cards/cards_index.yaml
-      - cards/P0-01_secret_leak_preflight_gate.md
-      - cards/P0-02_async_blocking_detector_guard.md
-      - cards/P1-03_ci_manual_test_safety_gate.md
-      - cards/P1-04_expert_profile_fallback_contract.md
-      - cards/P1-05_pilot_satisfaction_scoring_guard.md
-      - cards/P2-06_stable_promotion_contract.md
+    artifact_refs: [cards/cards_index.yaml]
     note: "All planned cards created"
   - phase_id: "5"
     status: pass
-    artifact_refs:
-      - reports/quality/card_quality_fct.yaml
-      - reports/execution/reviews/phase_5_quality_review.yaml
+    artifact_refs: [reports/quality/card_quality_fct.yaml, reports/execution/reviews/phase_5_quality_review.yaml]
     note: "FCT >=95 achieved"
   - phase_id: "6"
     status: pass
@@ -63,16 +36,16 @@ phases:
     note: "SSOT frozen with 100% release gate"
   - phase_id: "7"
     status: pass
-    artifact_refs:
-      - reports/execution/implementation_readiness.yaml
+    artifact_refs: [reports/execution/implementation_readiness.yaml]
     note: "Readiness complete"
   - phase_id: "8"
     status: pass
-    artifact_refs:
-      - reports/execution/requirements_traceability.yaml
-      - reports/execution/reviews/phase_8_implementation_review.yaml
-      - ssot/SSOT_KANBAN.json
+    artifact_refs: [reports/execution/requirements_traceability.yaml, reports/execution/reviews/phase_8_implementation_review.yaml, ssot/SSOT_KANBAN.json]
     note: "All planned cards implemented"
-all_required_phases_present: false
+  - phase_id: "9"
+    status: pass
+    artifact_refs: [reports/execution/final_terminal_report.ru.md, reports/execution/reviews/phase_9_final_review.yaml, reports/execution/gate_review_swarm_matrix.yaml]
+    note: "Terminal with limitations"
+all_required_phases_present: true
 no_critical_phase_skipped: true
 status: pass

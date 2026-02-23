@@ -1,0 +1,16 @@
+decisions:
+  - point: preflight_decision
+    status: pass
+    mode: strategy_variations
+  - point: fusion_decision
+    status: pass
+    mode: strategy_variations
+  - point: quality_95_validation
+    status: pass
+    mode: strategy_variations
+  - point: implementation_decision
+    status: pass
+    mode: strategy_variations
+  - point: final_readiness_decision
+    status: pass
+    mode: strategy_variations

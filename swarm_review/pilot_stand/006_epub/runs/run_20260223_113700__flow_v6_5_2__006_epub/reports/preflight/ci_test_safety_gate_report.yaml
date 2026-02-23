@@ -1,0 +1,5 @@
+status: fail
+destructive_tests_detected: 1
+unmarked_manual_tests_detected: 1
+env_mutation_tests_detected: 1
+notes: "Gate introduced by run mutation to v6.5.3; observed risk from pilot input."

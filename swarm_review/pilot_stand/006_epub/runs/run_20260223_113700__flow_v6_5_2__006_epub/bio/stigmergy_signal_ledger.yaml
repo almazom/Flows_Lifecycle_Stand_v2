@@ -1,0 +1,6 @@
+signals:
+  - signal: "security_secret_risk"
+    source: reports/expert/security_config_surface/report.md
+  - signal: "async_blocking_hotspots"
+    source: reports/expert/performance_concurrency/report.md
+status: pass

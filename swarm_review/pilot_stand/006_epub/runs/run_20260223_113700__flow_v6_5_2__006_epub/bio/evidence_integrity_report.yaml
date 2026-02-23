@@ -1,0 +1,5 @@
+no_claim_without_artifact: true
+no_fake_parallel_claim: true
+no_fake_pr_claim: true
+no_fake_six_expert_dispatch_claim: true
+status: pass
