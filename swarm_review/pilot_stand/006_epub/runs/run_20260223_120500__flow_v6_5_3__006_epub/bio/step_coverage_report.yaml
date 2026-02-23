@@ -4,22 +4,23 @@ allow_silent_skip: false
 phases:
   - phase_id: "0"
     status: pass
-    artifact_refs:
-      - reports/preflight/environment_gate_report.yaml
-      - reports/preflight/flow_version_lock_report.yaml
-      - reports/preflight/mode_executability_report.yaml
-      - reports/preflight/secret_leak_gate_report.yaml
-      - reports/preflight/ci_test_safety_gate_report.yaml
-      - reports/execution/reviews/phase_0_preflight_review.yaml
+    artifact_refs: [reports/preflight/environment_gate_report.yaml, reports/preflight/flow_version_lock_report.yaml, reports/preflight/mode_executability_report.yaml, reports/preflight/secret_leak_gate_report.yaml, reports/preflight/ci_test_safety_gate_report.yaml, reports/execution/reviews/phase_0_preflight_review.yaml]
     note: null
   - phase_id: "1"
     status: pass
-    artifact_refs:
-      - metadata/run_manifest.yaml
-      - metadata/input_manifest.yaml
-      - reports/expert/expert_index.yaml
-      - bio/spawn_registry.yaml
+    artifact_refs: [metadata/run_manifest.yaml, metadata/input_manifest.yaml, reports/expert/expert_index.yaml, bio/spawn_registry.yaml]
     note: "Dynamic expert selection focused on residual gaps"
+  - phase_id: "2"
+    status: pass
+    artifact_refs:
+      - reports/expert/quorum_parallelism/report.md
+      - reports/expert/evidence_integrity/report.md
+      - reports/expert/auto_commit_discipline/report.md
+      - reports/expert/worker_traceability/report.md
+      - reports/expert/gate_review_integrity/report.md
+      - reports/expert/stable_promotion_readiness/report.md
+      - bio/spawn_registry.yaml
+    note: "6 residual-gap expert reports collected"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass

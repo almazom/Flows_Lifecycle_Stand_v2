@@ -9,8 +9,92 @@ phase_1_expert_selection:
   ranking_model: weighted_signal_coverage_v2
   selection_rationale: "Residual risk targeting after run #1"
   fallback_domains: [architecture_boundaries, security_config_surface]
-entries: []
+entries:
+  - SUBAGENT: default
+    TASK_ID: run_20260223_120500_quorum_parallelism
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: quorum_parallelism
+    GOAL: "Find quorum and parallel evidence gaps"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2", "/home/pets/zoo/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/quorum_parallelism/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-5f71-7fe2-87f8-9ce9a63039b1"
+    spawned_at: "2026-02-23T12:00:10Z"
+    started_at: "2026-02-23T12:00:11Z"
+    finished_at: "2026-02-23T12:01:59Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_120500_evidence_integrity
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: evidence_integrity
+    GOAL: "Find evidence integrity gaps"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/evidence_integrity/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-6125-72b1-a6e8-6f28b20b3d74"
+    spawned_at: "2026-02-23T12:00:10Z"
+    started_at: "2026-02-23T12:00:11Z"
+    finished_at: "2026-02-23T12:02:44Z"
+  - SUBAGENT: default
+    TASK_ID: run_20260223_120500_auto_commit_discipline
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: auto_commit_discipline
+    GOAL: "Find auto-commit contract drift"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/auto_commit_discipline/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-63e3-76c2-ab3d-fb05e665cbe1"
+    spawned_at: "2026-02-23T12:00:11Z"
+    started_at: "2026-02-23T12:00:12Z"
+    finished_at: "2026-02-23T12:02:08Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_120500_worker_traceability
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: worker_traceability
+    GOAL: "Find req-card-code chain gaps"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/worker_traceability/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-7849-7c21-a5b2-2e92409e54ce"
+    spawned_at: "2026-02-23T12:00:11Z"
+    started_at: "2026-02-23T12:00:12Z"
+    finished_at: "2026-02-23T12:03:40Z"
+  - SUBAGENT: default
+    TASK_ID: run_20260223_120500_gate_review_integrity
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: gate_review_integrity
+    GOAL: "Find gate review proof gaps"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/gate_review_integrity/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-7a18-73d2-94e6-2bf57bd54741"
+    spawned_at: "2026-02-23T12:00:12Z"
+    started_at: "2026-02-23T12:00:13Z"
+    finished_at: "2026-02-23T12:03:04Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_120500_stable_promotion_readiness
+    PHASE: "2"
+    BIO_CASTE: scout
+    ROLE: stable_promotion_readiness
+    GOAL: "Find stable readiness blockers"
+    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2/swarm_review/pilot_stand/006_epub"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/expert/stable_promotion_readiness/report.md"]
+    OUTPUT: summary
+    agent_id: "019c89ba-7bd4-7de3-bc7b-5902c3fe492f"
+    spawned_at: "2026-02-23T12:00:12Z"
+    started_at: "2026-02-23T12:00:13Z"
+    finished_at: "2026-02-23T12:01:31Z"
 parallel_dispatch_evidence:
-  dispatch_window_seconds: 0
-  all_6_dispatched_within_window: false
-  overlapping_runtime_pairs: 0
+  dispatch_window_seconds: 2
+  all_6_dispatched_within_window: true
+  overlapping_runtime_pairs: 15
