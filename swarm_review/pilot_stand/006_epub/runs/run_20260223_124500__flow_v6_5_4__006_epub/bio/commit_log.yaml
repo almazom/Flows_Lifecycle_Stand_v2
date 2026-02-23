@@ -42,4 +42,4 @@ commits:
   - phase: 9
     repo: /home/pets/Flows_Lifecycle_Stand_v2
     commit_sha: 2573b4c
-    message: "Phase 9: terminal stabilization and stable evidence for run_20260223_124500"
+    message: "Phase 9: bind final PASS reviewers to quorum provenance for run_20260223_124500"
