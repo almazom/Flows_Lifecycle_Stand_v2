@@ -31,7 +31,7 @@
 👩‍⚕️ FCT NURSES    Phase 5    → 95% FCT confidence
 🔒 SSOT FREEZE    Phase 6    → JSON Kanban + 100% gate
 👷 WORKERS x3     Phase 8    → Code + commits
-🧪 PR REVIEW      Phase 9a   → PR_READY or HUMAN_REVIEW_REQUIRED
+🧪 PR REVIEW      Phase 9a   → PR_APPROVED or PR_NEEDS_FIX
 ✅ TERMINAL        Phase 9b   → Complete!
 ```
 
@@ -51,7 +51,7 @@
 | 6 | SSOT Freeze | SSOT_KANBAN.json + 100% gate | ✓ | **auto** |
 | 7 | Readiness | Implementation plan | ✓ | **auto** |
 | 8 | Workers | Code + commits | ✓ | **auto** |
-| 9a | PR Review | `phase_9a_pr_review.yaml` | ✓ | **auto** |
+| 9a | PR Auto-Review | `pr_auto_review_report.yaml` + `phase_9_pr_review.yaml` | ✓ | **auto** |
 | 9b | Final | Russian terminal report + final review | ✓ | terminal |
 
 > **Phases 6→7→8→9a→9b are AUTO-TRANSITION. Human review can be policy-selected, not flow-blocking.**
@@ -96,12 +96,13 @@ runs/
     │       ├── gate_review_swarm_matrix.yaml
     │       ├── requirements_traceability.yaml
     │       ├── final_terminal_report.ru.md ← MUST BE IN RUSSIAN
+    │       ├── pr_auto_review_report.yaml
     │       └── reviews/
     │           ├── phase_0_preflight_review.yaml
     │           ├── phase_3_fusion_review.yaml
     │           ├── phase_5_quality_review.yaml
     │           ├── phase_8_implementation_review.yaml
-    │           ├── phase_9a_pr_review.yaml
+    │           ├── phase_9_pr_review.yaml
     │           └── phase_9_final_review.yaml
     ├── cards/
     │   ├── card_plan.yaml                 ← Phase 4a output
@@ -131,7 +132,7 @@ runs/
 defaults:
   selected_mode: implementation
   analysis_only_requires_explicit_opt_in: true
-  pr_review_mode: human
+  pr_review_mode: auto
 
 modes:
   analysis_only:
@@ -147,12 +148,12 @@ modes:
 pr_review_modes:
   auto:
     requires: [checks_pass, reviewer_quorum_min_3]
-    phase_9a_decision: PR_READY
+    phase_9_decision: PR_APPROVED
     allows_system_final_review_claim: true
 
   human:
     requires: [handoff_attestation]
-    phase_9a_decision: HUMAN_REVIEW_REQUIRED
+    phase_9_decision: HUMAN_REVIEW_REQUIRED
     allows_system_final_review_claim: false
 ```
 
@@ -166,7 +167,7 @@ pr_review_modes:
 
 **Gates:**
 - `environment_gate` — write permissions, target project exists, shared resources available
-- `flow_version_lock_gate` — active START = v6.5.5, symlink valid
+- `flow_version_lock_gate` — active START = v6.5.6, symlink valid
 - `mode_executability_gate` — detect agents, resolve mode, deny impossible claims
 - `secret_leak_gate` — detect plaintext secrets in input/project paths and run artifacts
 - `ci_test_safety_gate` — detect destructive/manual tests leaking into default CI recommendations
@@ -347,7 +348,7 @@ status: pass | fail
 **SSOT_KANBAN.json schema:**
 ```json
 {
-  "version": "6.5.5",
+  "version": "6.5.6",
   "flow": "swarm_review",
   "run_id": "string",
   "frozen_at": "ISO8601",
@@ -412,24 +413,35 @@ status: pass | fail
 
 ---
 
-### Phase 9a — PR Review Policy Gate
+### Phase 9a — PR Auto-Review Gate
 
-**Intent:** Resolve PR review policy before terminal claim.
+**Intent:** Run automatic PR review with 3 specialized reviewer agents before terminal.
+
+**Reviewers (parallel):**
+- `security_reviewer` — secret leaks, vulnerabilities, dependency risk
+- `logic_reviewer` — card-to-code traceability, tests, regressions
+- `style_reviewer` — linters, codebase consistency, docs update
 
 **Rules:**
-- Read `pr_review_mode` (`auto` or `human`) from `shared/config.yaml`
-- If `pr_review_mode == auto`:
-  - run automated checks
-  - run reviewer quorum (>=3 agents) on implementation diff
-  - emit `phase_9a_pr_review.yaml` with `decision: PR_READY` only when pass
-- If `pr_review_mode == human`:
-  - emit `phase_9a_pr_review.yaml` with `decision: HUMAN_REVIEW_REQUIRED`
-  - system must not claim final PR review/merge
+- `pr_review_mode` default is `auto` (`shared/config.yaml`)
+- Spawn 3 reviewers in parallel and capture verdicts
+- Quorum rule: `>=2/3` PASS for approval
+- Write machine-readable summary to `pr_auto_review_report.yaml` using `../../shared/templates/PR_AUTO_REVIEW_REPORT_TEMPLATE.yaml`
+- Write decision review to `phase_9_pr_review.yaml` using `../../shared/templates/PHASE_9_PR_REVIEW_TEMPLATE.yaml`
 
-**Artifact:**
-- `reports/execution/reviews/phase_9a_pr_review.yaml`
+**Statuses:**
+- `APPROVED` → continue to Phase 9b
+- `NEEDS_FIX` → auto-return to Phase 8, apply fixes, re-run Phase 9a
+- `REJECTED` → BLOCKED
 
-**Transition:** `auto → Phase 9b`
+**Artifacts:**
+- `reports/execution/pr_auto_review_report.yaml`
+- `reports/execution/reviews/phase_9_pr_review.yaml`
+
+**Transition:**
+- `APPROVED → Phase 9b`
+- `NEEDS_FIX → Phase 8`
+- `REJECTED → BLOCKED`
 
 ---
 
@@ -438,6 +450,7 @@ status: pass | fail
 **Intent:** Verify gates and emit terminal report with policy-consistent PR claim.
 
 **Required checks:**
+- `pr_auto_review_gate == pass`
 - `evolution_regression_gate == pass`
 - `non_stop_continuity_gate == pass`
 - `step_coverage_gate == pass`
@@ -448,8 +461,9 @@ status: pass | fail
 - `stable_promotion_gate == pass`
 
 **PR claim policy:**
-- If `phase_9a_pr_review.decision == PR_READY`: allowed terminal claim `pr_reviewed_by_system: true`
-- If `phase_9a_pr_review.decision == HUMAN_REVIEW_REQUIRED`: terminal must attest `pr_reviewed_by_system: false`
+- If `phase_9_pr_review.decision == PR_APPROVED`: allowed terminal claim `pr_reviewed_by_system: true`
+- If `phase_9_pr_review.decision == PR_NEEDS_FIX`: terminal not allowed; must return to Phase 8
+- If `pr_review_mode == human`: terminal must attest `pr_reviewed_by_system: false`
 
 **Stable promotion gate criteria:**
 - `satisfaction_score_percent >= 95`
@@ -462,7 +476,8 @@ status: pass | fail
 
 **Artifacts:**
 - `reports/execution/final_terminal_report.ru.md` ← **IN RUSSIAN**
-- `reports/execution/reviews/phase_9a_pr_review.yaml`
+- `reports/execution/pr_auto_review_report.yaml`
+- `reports/execution/reviews/phase_9_pr_review.yaml`
 - `reports/execution/reviews/phase_9_final_review.yaml`
 - `reports/execution/gate_review_swarm_matrix.yaml`
 
@@ -475,7 +490,7 @@ status: pass | fail
 | Guard | File | Covers |
 |-------|------|--------|
 | Stigmergy | ../../shared/guards/stigmergy.md | Artifact coordination |
-| Quorum | ../../shared/guards/quorum.md | 2/3 consensus + 5 gates |
+| Quorum | ../../shared/guards/quorum.md | 2/3 consensus + 5 base gates (+ PR gate in auto mode) |
 | Pheromone | ../../shared/guards/pheromone.md | Priority decay |
 | Auto-commit | ../../shared/guards/auto_commit.md | File + phase commits |
 | Colony Memory | ../../shared/guards/colony_memory.md | Learn between runs |
@@ -496,9 +511,9 @@ status: pass | fail
 
 ---
 
-## 📋 Mandatory Core Artifact Set (18 items)
+## 📋 Mandatory Core Artifact Set (17 base + 2 conditional)
 
-At terminal phase, ALL of these must exist and be non-empty:
+At terminal phase, base items must exist and be non-empty:
 
 ```
 01. metadata/run_manifest.yaml
@@ -516,9 +531,15 @@ At terminal phase, ALL of these must exist and be non-empty:
 13. bio/spawn_registry.yaml
 14. bio/non_stop_watchdog.yaml
 15. reports/execution/final_terminal_report.ru.md
-16. reports/execution/reviews/phase_9a_pr_review.yaml
-17. reports/execution/gate_review_swarm_matrix.yaml
-18. reports/execution/reviews/phase_9_final_review.yaml
+16. reports/execution/gate_review_swarm_matrix.yaml
+17. reports/execution/reviews/phase_9_final_review.yaml
+```
+
+Conditional items (required when `pr_review_mode == auto`):
+
+```
+18. reports/execution/pr_auto_review_report.yaml
+19. reports/execution/reviews/phase_9_pr_review.yaml
 ```
 
 ---
@@ -529,7 +550,7 @@ At terminal phase, ALL of these must exist and be non-empty:
 DEFAULT_POLICY:
   selected_mode: implementation
   analysis_only_requires_explicit_opt_in: true
-  pr_review_mode: human
+  pr_review_mode: auto
 
 ANALYSIS_READY:
   phases: 0-7 complete
@@ -542,7 +563,8 @@ COMPLETE:
   phases: 0-9b complete
   cards: all done
   pr_review_mode: auto
-  pr_ready: true
+  pr_ready: approved
+  pr_auto_review_status: APPROVED
 
 COMPLETE_WITH_LIMITATIONS:
   phases: 0-9b complete
@@ -553,6 +575,7 @@ COMPLETE_WITH_LIMITATIONS:
 
 BLOCKED:
   reason: required (explicit, never null)
+  pr_auto_review_status_allowed: [REJECTED]
 ```
 
 ---
@@ -569,6 +592,8 @@ changes_from_6_5_5:
   - hard-24: phase 9 split into PR policy gate (9a) and terminal gate (9b) with auto/human modes
   - hard-25: new guard `pr_review_mode.md` added and connected in guard table
   - hard-26: shared config gains explicit `pr_review.mode` policy contract
+  - hard-27: auto PR-review gate now requires 3 parallel reviewers (security/logic/style) with 2/3 quorum
+  - hard-28: phase-9 artifacts normalized to `pr_auto_review_report.yaml` + `phase_9_pr_review.yaml`
 
 next_patch: 6.5.7
 next_minor: 6.6

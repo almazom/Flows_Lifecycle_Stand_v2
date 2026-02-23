@@ -22,7 +22,7 @@ principle:
   - canonical_source: "shared/guards/artifact_minimality.md"
 ```
 
-## Mandatory Core Artifact Set (17 base items + 1 conditional)
+## Mandatory Core Artifact Set (17 base items + 2 conditional)
 
 ```
 01. metadata/run_manifest.yaml
@@ -44,16 +44,17 @@ principle:
 17. reports/execution/reviews/phase_9_final_review.yaml
 ```
 
-Conditional item (required when `pr_review_mode == auto`):
+Conditional items (required when `pr_review_mode == auto`):
 
 ```
-18. reports/execution/reviews/phase_9a_pr_review.yaml
+18. reports/execution/pr_auto_review_report.yaml
+19. reports/execution/reviews/phase_9_pr_review.yaml
 ```
 
 ## Pass
 
 - All 17 base artifacts exist and are non-empty at terminal
-- Conditional item exists when PR review mode requires it
+- Conditional items exist when PR review mode requires them
 - Optional artifacts supplement but do not substitute core
 - No alternate base core list is allowed in versioned START files
 

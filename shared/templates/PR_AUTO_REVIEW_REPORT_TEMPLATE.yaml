@@ -1,0 +1,28 @@
+run_id: string
+flow_version: string
+phase: 9a
+pr_ref:
+  number: integer
+  branch: string
+  url: string | null
+reviewers:
+  - role: security
+    agent_id: string
+    verdict: PASS | FAIL
+    findings: []
+  - role: logic
+    agent_id: string
+    verdict: PASS | FAIL
+    findings: []
+  - role: style
+    agent_id: string
+    verdict: PASS | FAIL
+    findings: []
+quorum:
+  min_reviewers: 3
+  pass_threshold: 0.67
+  passed_count: integer
+  total_count: 3
+status: APPROVED | NEEDS_FIX | REJECTED
+decision_reason: string
+next_transition: phase_9b | phase_8 | blocked

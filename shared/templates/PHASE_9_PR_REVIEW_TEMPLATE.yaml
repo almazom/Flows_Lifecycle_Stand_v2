@@ -1,0 +1,17 @@
+phase: 9a
+decision_point: pr_review_decision
+reviewers:
+  - string
+  - string
+  - string
+reviewer_outputs:
+  - string
+  - string
+  - string
+status: pass | fail | not_applicable_by_policy
+decision: PR_APPROVED | PR_NEEDS_FIX | PR_REJECTED | HUMAN_REVIEW_REQUIRED
+quorum:
+  pass_threshold: 0.67
+  passed_count: integer
+  total_count: integer
+next_transition: phase_9b | phase_8 | blocked

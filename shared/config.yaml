@@ -25,11 +25,15 @@ auto_commit:
   branch_per_run: true          # feature/swarm-review-YYYYMMDD
 
 pr_review:
-  mode: human                   # auto | human
+  mode: auto                    # auto | human
   reviewer_agents_min: 3
+  pass_threshold: 0.67          # 2/3 quorum
+  max_fix_loops: 5
   auto:
     run_checks: true
     require_pr_ready_gate: true
+    statuses: [APPROVED, NEEDS_FIX, REJECTED]
+    reviewer_roles: [security, logic, style]
   human:
     system_claims_final_review: false
 
