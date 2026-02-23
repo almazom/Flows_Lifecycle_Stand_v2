@@ -60,7 +60,103 @@ entries:
   spawned_at: '2026-02-23T12:28:01Z'
   started_at: '2026-02-23T12:28:02Z'
   finished_at: '2026-02-23T12:28:34Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_producer_counting_model
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: producer_counting_model
+  GOAL: Close producer counting gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/producer_counting_model/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-6a67-7bf0-ab78-6c77a183fd65
+  spawned_at: '2026-02-23T12:32:00Z'
+  started_at: '2026-02-23T12:32:01Z'
+  finished_at: '2026-02-23T12:34:00Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_gate_spawn_provenance
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: gate_spawn_provenance
+  GOAL: Close gate spawn provenance gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/gate_spawn_provenance/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-6c78-7bd1-a583-930d1099b051
+  spawned_at: '2026-02-23T12:32:00Z'
+  started_at: '2026-02-23T12:32:01Z'
+  finished_at: '2026-02-23T12:34:39Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_traceability_sync
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: traceability_sync
+  GOAL: Close traceability sync gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/traceability_sync/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-6f30-7d42-914e-46b14326156b
+  spawned_at: '2026-02-23T12:32:01Z'
+  started_at: '2026-02-23T12:32:02Z'
+  finished_at: '2026-02-23T12:33:38Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_auto_commit_runtime_enforcement
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: auto_commit_runtime_enforcement
+  GOAL: Close runtime auto-commit gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/auto_commit_runtime_enforcement/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-70de-7611-88f1-7b5af5c681c5
+  spawned_at: '2026-02-23T12:32:01Z'
+  started_at: '2026-02-23T12:32:02Z'
+  finished_at: '2026-02-23T12:34:24Z'
+- SUBAGENT: default
+  TASK_ID: run_20260223_124500_stable_scoring_hard_gates
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: stable_scoring_hard_gates
+  GOAL: Close stable scoring gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2/swarm_review/pilot_stand/006_epub
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/stable_scoring_hard_gates/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-72f3-7b52-8043-7060b47bbc63
+  spawned_at: '2026-02-23T12:32:02Z'
+  started_at: '2026-02-23T12:32:03Z'
+  finished_at: '2026-02-23T12:34:57Z'
+- SUBAGENT: worker
+  TASK_ID: run_20260223_124500_final_readiness_consolidation
+  PHASE: '2'
+  BIO_CASTE: scout
+  ROLE: final_readiness_consolidation
+  GOAL: Close final readiness consolidation gaps
+  INPUT_ARTIFACTS:
+  - /home/pets/Flows_Lifecycle_Stand_v2
+  CONSTRAINTS: non-stop|md-only|no-fabrication
+  OUTPUT_ARTIFACTS:
+  - reports/expert/final_readiness_consolidation/report.md
+  OUTPUT: summary
+  agent_id: 019c89d5-758e-77e0-89cd-5b135b47f745
+  spawned_at: '2026-02-23T12:32:02Z'
+  started_at: '2026-02-23T12:32:03Z'
+  finished_at: '2026-02-23T12:34:44Z'
 parallel_dispatch_evidence:
-  dispatch_window_seconds: 1
-  all_6_dispatched_within_window: false
-  overlapping_runtime_pairs: 3
+  dispatch_window_seconds: 2
+  all_6_dispatched_within_window: true
+  overlapping_runtime_pairs: 15

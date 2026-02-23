@@ -10,6 +10,10 @@ phases:
     status: pass
     artifact_refs: [metadata/run_manifest.yaml, metadata/input_manifest.yaml, reports/expert/expert_index.yaml, bio/spawn_registry.yaml]
     note: "Final-gap expert selection completed"
+  - phase_id: "2"
+    status: pass
+    artifact_refs: [reports/expert/producer_counting_model/report.md, reports/expert/gate_spawn_provenance/report.md, reports/expert/traceability_sync/report.md, reports/expert/auto_commit_runtime_enforcement/report.md, reports/expert/stable_scoring_hard_gates/report.md, reports/expert/final_readiness_consolidation/report.md, bio/spawn_registry.yaml]
+    note: "6 experts dispatched for final gap closure"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
