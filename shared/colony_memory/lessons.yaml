@@ -1,0 +1,11 @@
+# Colony Memory - Lessons
+# Insights from runs
+
+lessons: []
+
+# Format:
+# - id: L-001
+#   insight: "What we learned"
+#   context: "When this applies"
+#   run_id: swarm_review_YYYYMMDD
+#   date: YYYY-MM-DD

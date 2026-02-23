@@ -1,0 +1,12 @@
+# Colony Memory - Anti-Patterns
+# NEVER repeat these (graveyard)
+
+anti_patterns: []
+
+# Format:
+# - id: AP-001
+#   description: "Anti-pattern description"
+#   failure_mode: "What went wrong"
+#   first_seen: run_id
+#   quarantine: active
+#   mutation_fix: "How to prevent"

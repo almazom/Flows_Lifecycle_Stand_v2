@@ -1,0 +1,12 @@
+# Colony Memory - Patterns
+# Successful patterns to repeat
+
+patterns: []
+
+# Format:
+# - id: P-001
+#   description: "Pattern description"
+#   priority: P0
+#   first_seen: run_id
+#   success_count: 1
+#   last_used: run_id
