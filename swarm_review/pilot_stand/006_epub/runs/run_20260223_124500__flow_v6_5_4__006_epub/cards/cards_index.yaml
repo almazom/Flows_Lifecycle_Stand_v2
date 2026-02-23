@@ -1,0 +1,32 @@
+cards:
+  - id: P0-01
+    file: cards/P0-01_session_producer_evidence_fields.md
+    priority: P0
+    complexity_hours: 2.0
+    score_15pt: 14
+  - id: P0-02
+    file: cards/P0-02_gate_reviewer_spawn_provenance_required.md
+    priority: P0
+    complexity_hours: 2.0
+    score_15pt: 14
+  - id: P0-03
+    file: cards/P0-03_stable_promotion_gate_phase9_binding.md
+    priority: P0
+    complexity_hours: 2.5
+    score_15pt: 14
+  - id: P1-04
+    file: cards/P1-04_final_gate_matrix_schema_guard.md
+    priority: P1
+    complexity_hours: 2.0
+    score_15pt: 13
+  - id: P1-05
+    file: cards/P1-05_mandatory_core_add_final_gate_evidence.md
+    priority: P1
+    complexity_hours: 1.5
+    score_15pt: 13
+  - id: P1-06
+    file: cards/P1-06_runtime_auto_commit_pending_block_and_file_event_log.md
+    priority: P1
+    complexity_hours: 2.5
+    score_15pt: 14
+status: pass
