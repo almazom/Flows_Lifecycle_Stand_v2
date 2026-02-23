@@ -59,9 +59,13 @@ phases:
     note: "FCT >=95 achieved"
   - phase_id: "6"
     status: pass
-    artifact_refs:
-      - ssot/SSOT_KANBAN.json
+    artifact_refs: [ssot/SSOT_KANBAN.json]
     note: "SSOT frozen with 100% release gate"
+  - phase_id: "7"
+    status: pass
+    artifact_refs:
+      - reports/execution/implementation_readiness.yaml
+    note: "Readiness complete"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass

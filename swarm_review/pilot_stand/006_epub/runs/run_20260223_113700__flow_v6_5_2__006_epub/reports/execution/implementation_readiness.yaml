@@ -1,0 +1,24 @@
+status: pass
+source_of_truth: ssot/SSOT_KANBAN.json
+worker_assignments:
+  - card: P0-01
+    worker: codex
+  - card: P0-02
+    worker: codex
+  - card: P1-03
+    worker: codex
+  - card: P1-04
+    worker: codex
+  - card: P1-05
+    worker: codex
+  - card: P2-06
+    worker: codex
+dependency_order:
+  - P0-01
+  - P0-02
+  - P1-03
+  - P1-04
+  - P1-05
+  - P2-06
+notes:
+  - "All cards scoped to flow improvements, not target project feature changes"
