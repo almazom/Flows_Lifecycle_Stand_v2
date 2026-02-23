@@ -1,0 +1,9 @@
+phase: 5
+decision_point: quality_95_validation
+reviewers: [codex_primary, nurse_agent_A, nurse_agent_B]
+status: pass
+checks:
+  completeness_ge_95: true
+  integrity_ge_95: true
+  quality_ge_95: true
+  confidence_ge_95: true

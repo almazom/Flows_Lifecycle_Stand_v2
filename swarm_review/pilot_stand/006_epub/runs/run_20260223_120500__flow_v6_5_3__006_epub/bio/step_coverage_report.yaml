@@ -26,6 +26,10 @@ phases:
     status: pass
     artifact_refs: [cards/cards_index.yaml]
     note: "Cards generated"
+  - phase_id: "5"
+    status: pass
+    artifact_refs: [reports/quality/card_quality_fct.yaml, reports/execution/reviews/phase_5_quality_review.yaml]
+    note: "FCT >=95 achieved"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
