@@ -1,0 +1,11 @@
+phase: 3
+decision_point: fusion_decision
+reviewers:
+  - codex_primary
+  - worker_agent_A
+  - worker_agent_B
+status: pass
+checks:
+  all_findings_mapped: true
+  unlabeled_items: 0
+  conflict_free: true

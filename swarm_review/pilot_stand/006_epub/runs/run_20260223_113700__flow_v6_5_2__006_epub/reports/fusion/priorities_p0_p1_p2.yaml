@@ -1,0 +1,143 @@
+p0:
+  - id: AR-01
+    title: UI layer executes destructive schema operations
+    source: architecture_boundaries
+    evidence:
+      - bot/handlers/common.py:447
+      - bot/handlers/common.py:543
+  - id: RE-01
+    title: Translation may report success after state finalization failure
+    source: reliability_error_handling
+    evidence:
+      - core/translation/pipeline.py:305
+      - core/translation/pipeline.py:442
+  - id: TS-01
+    title: Destructive/manual test can run in default CI selection
+    source: testing_ci_quality
+    evidence:
+      - tests/integration/test_manual_fallback.py:15
+      - .github/workflows/ci.yml:24
+  - id: SE-01
+    title: Plaintext bot credential present in runtime env
+    source: security_config_surface
+    evidence:
+      - .env:3
+      - config.py:157
+  - id: PE-01
+    title: Blocking subprocess in async summarization path
+    source: performance_concurrency
+    evidence:
+      - core/summarizer/providers/gemini_cli_provider.py:216
+      - bot/handlers/navigation/summary/request.py:623
+  - id: PE-02
+    title: Vision path blocks event loop via sync subprocess
+    source: performance_concurrency
+    evidence:
+      - core/vision/gemini_cli_vision_service.py:59
+      - core/vision/ask_gemini_vision_service.py:83
+
+p1:
+  - id: AR-02
+    title: Duplicate back-to-library flow in two routers
+    source: architecture_boundaries
+    evidence: [main.py:203, bot/handlers/navigation_reloaded.py:111]
+  - id: AR-03
+    title: Import-time side effects in router wiring
+    source: architecture_boundaries
+    evidence: [bot/handlers/navigation/router.py:45, bot/handlers/navigation/__init__.py:51]
+  - id: AR-04
+    title: navigation package acts as service locator
+    source: architecture_boundaries
+    evidence: [bot/handlers/navigation/__init__.py:13, bot/handlers/navigation/summary/request.py:16]
+  - id: RE-02
+    title: Timeout errors downgraded to generic exceptions
+    source: reliability_error_handling
+    evidence: [core/translation/pipeline.py:66, core/translation/pipeline.py:164]
+  - id: RE-03
+    title: All-failed fallback reported as NO_RESULTS regardless of real cause
+    source: reliability_error_handling
+    evidence: [core/fallback/strategy.py:64, core/fallback/strategy.py:128]
+  - id: RE-04
+    title: Zero-attempt fallback can trigger model validation and generic catch
+    source: reliability_error_handling
+    evidence: [core/fallback/orchestrator.py:113, core/fallback/models.py:242]
+  - id: RE-05
+    title: Language fallback chain not containing attempt-level runtime exceptions
+    source: reliability_error_handling
+    evidence: [core/services/book_search_with_fallback.py:98, core/telegram_book_service.py:89]
+  - id: TS-02
+    title: CI excludes integration/e2e marker-tagged suites
+    source: testing_ci_quality
+    evidence: [.github/workflows/ci.yml:24, pytest.ini:6]
+  - id: TS-03
+    title: E2E marker hygiene inconsistent
+    source: testing_ci_quality
+    evidence: [tests/e2e/test_photo_to_book_flow.py:30, tests/e2e/test_translation_pipeline_complete.py:64]
+  - id: TS-05
+    title: Dependency installs are non-deterministic in CI
+    source: testing_ci_quality
+    evidence: [.github/workflows/ci.yml:19, requirements.txt:8]
+  - id: SE-02
+    title: Whitelist bypass enabled by default path
+    source: security_config_surface
+    evidence: [.env.example:7, bot/filters.py:35]
+  - id: SE-03
+    title: CLI query path lacks strict option boundary
+    source: security_config_surface
+    evidence: [bot/handlers/common.py:328, core/find_epub_cli.py:226]
+  - id: SE-05
+    title: Sensitive values printed/backed up by scripts
+    source: security_config_surface
+    evidence: [scripts/development/debugging/clean_env_deepseek_diagnosis.sh:40, docker-entrypoint.sh:90]
+  - id: PE-03
+    title: Sync EPUB parsing inside async translation extraction
+    source: performance_concurrency
+    evidence: [core/translation/content_extractor.py:41, bot/handlers/navigation/chapter/actions.py:245]
+  - id: PE-04
+    title: Unbounded concurrent Telegram deletions
+    source: performance_concurrency
+    evidence: [bot/handlers/common.py:989, bot/handlers/common.py:1010]
+  - id: MA-01
+    title: Bulk upload state restart-unsafe
+    source: maintainability_doc_debt
+    evidence: [bot/handlers/bulk_upload.py:72, bot/handlers/bulk_upload.py:235]
+  - id: MA-02
+    title: Critical upload scenarios remain xfail TODO placeholders
+    source: maintainability_doc_debt
+    evidence: [tests/integration/test_upload.py:329, tests/integration/test_upload.py:333]
+
+p2:
+  - id: AR-05
+    title: keyboards layer monolith crosses boundaries
+    source: architecture_boundaries
+    evidence: [bot/keyboards.py:563, bot/keyboards.py:1811]
+  - id: TS-04
+    title: Duplicate test function shadows previous definition
+    source: testing_ci_quality
+    evidence: [tests/e2e/test_user_case_15_docker_find_human_behavior.py:639, tests/e2e/test_user_case_15_docker_find_human_behavior.py:1212]
+  - id: SE-04
+    title: PATH-based command execution with unqualified binary name
+    source: security_config_surface
+    evidence: [core/vision/ask_gemini_vision_service.py:22, core/ai_toc_extractor.py:290]
+  - id: PE-05
+    title: Blocking mp3 hash/file read in async TTS handler
+    source: performance_concurrency
+    evidence: [bot/handlers/navigation/chapter/actions.py:538, bot/handlers/navigation/chapter/actions.py:663]
+  - id: MA-03
+    title: Docs index references stale filename
+    source: maintainability_doc_debt
+    evidence: [docs/_INDEX.md:13, docs/00-overview/user_stories.md:1]
+  - id: MA-04
+    title: Project identity inconsistent across docs
+    source: maintainability_doc_debt
+    evidence: [README.md:1, docs/03-operations/deployment/docker_management.md:3]
+  - id: MA-05
+    title: keyboard module maintainability debt (todo/deprecated)
+    source: maintainability_doc_debt
+    evidence: [bot/keyboards.py:567, bot/keyboards.py:1442]
+
+mapping_completeness:
+  total_findings_expected: 30
+  total_findings_mapped: 30
+  unmapped: []
+status: pass

@@ -29,6 +29,13 @@ phases:
       - reports/expert/maintainability_doc_debt/report.md
       - bio/spawn_registry.yaml
     note: "6 expert reports collected with bounded parallel dispatch evidence"
+  - phase_id: "3"
+    status: pass
+    artifact_refs:
+      - reports/fusion/fusion_report.md
+      - reports/fusion/priorities_p0_p1_p2.yaml
+      - reports/execution/reviews/phase_3_fusion_review.yaml
+    note: "P0/P1/P2 fusion completed for all findings"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
