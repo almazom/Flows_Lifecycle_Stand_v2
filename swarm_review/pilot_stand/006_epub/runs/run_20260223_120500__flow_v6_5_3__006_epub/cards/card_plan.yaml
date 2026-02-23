@@ -1,0 +1,45 @@
+total_tasks: 10
+estimated_cards: 6
+cards_preview:
+  - id: P0-01
+    title: hard_fail_step_coverage_on_missing_phases
+    priority: P0
+    complexity_hours: 2.0
+    split_from: null
+    depends_on: []
+    domain: step_coverage
+  - id: P0-02
+    title: deterministic_secret_gate_fail_logic
+    priority: P0
+    complexity_hours: 1.5
+    split_from: null
+    depends_on: []
+    domain: evidence_integrity
+  - id: P0-03
+    title: quorum_schema_enforcement
+    priority: P0
+    complexity_hours: 3.0
+    split_from: null
+    depends_on: []
+    domain: quorum
+  - id: P1-04
+    title: auto_commit_sha_validation
+    priority: P1
+    complexity_hours: 2.0
+    split_from: null
+    depends_on: [P0-01]
+    domain: auto_commit
+  - id: P1-05
+    title: requirements_backlog_traceability_contract
+    priority: P1
+    complexity_hours: 2.5
+    split_from: null
+    depends_on: [P0-03]
+    domain: traceability
+  - id: P1-06
+    title: ssot_card_status_sync_contract
+    priority: P1
+    complexity_hours: 1.5
+    split_from: null
+    depends_on: [P1-05]
+    domain: traceability

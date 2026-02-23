@@ -18,6 +18,14 @@ phases:
     status: pass
     artifact_refs: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml, reports/execution/reviews/phase_3_fusion_review.yaml]
     note: "Residual gaps fused and deduplicated"
+  - phase_id: "4a"
+    status: pass
+    artifact_refs: [cards/card_plan.yaml]
+    note: "Card analysis complete"
+  - phase_id: "4b"
+    status: pass
+    artifact_refs: [cards/cards_index.yaml]
+    note: "Cards generated"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
