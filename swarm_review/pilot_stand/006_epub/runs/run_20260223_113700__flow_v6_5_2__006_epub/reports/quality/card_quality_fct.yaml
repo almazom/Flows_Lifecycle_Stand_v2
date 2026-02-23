@@ -1,0 +1,10 @@
+completeness_score: 96
+integrity_score: 95
+quality_score: 95
+comprehension_3min_pass_rate: 95
+template_compliance_percent: 96
+confidence_percent: 95
+status: pass
+notes:
+  - "All 6 cards include required sections"
+  - "No placeholder tokens detected"

@@ -52,6 +52,12 @@ phases:
       - cards/P1-05_pilot_satisfaction_scoring_guard.md
       - cards/P2-06_stable_promotion_contract.md
     note: "All planned cards created"
+  - phase_id: "5"
+    status: pass
+    artifact_refs:
+      - reports/quality/card_quality_fct.yaml
+      - reports/execution/reviews/phase_5_quality_review.yaml
+    note: "FCT >=95 achieved"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
