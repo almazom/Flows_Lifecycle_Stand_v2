@@ -31,6 +31,10 @@ aggregation:
   satisfaction_score_percent: 0
   confidence_score_percent: 0
   stable_candidate: false
+  stable_decision: "not_stable"
+  open_p0_gaps: 0
+  mandatory_artifacts_complete: false
+  signed_run_reference: ""
   formula: "mean(E01..E22) with P0 penalty"
   evidence_links_required: true
   hard_gates:

@@ -22,7 +22,7 @@ principle:
   - canonical_source: "shared/guards/artifact_minimality.md"
 ```
 
-## Mandatory Core Artifact Set (15 items)
+## Mandatory Core Artifact Set (17 items)
 
 ```
 01. metadata/run_manifest.yaml
@@ -40,11 +40,13 @@ principle:
 13. bio/spawn_registry.yaml
 14. bio/non_stop_watchdog.yaml
 15. reports/execution/final_terminal_report.ru.md
+16. reports/execution/gate_review_swarm_matrix.yaml
+17. reports/execution/reviews/phase_9_final_review.yaml
 ```
 
 ## Pass
 
-- All 15 core artifacts exist and are non-empty at terminal
+- All 17 core artifacts exist and are non-empty at terminal
 - Optional artifacts supplement but do not substitute core
 - No alternate core list is allowed in versioned START files
 

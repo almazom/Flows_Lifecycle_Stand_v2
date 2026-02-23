@@ -1,0 +1,20 @@
+traceability:
+  - finding: R3-P0-01
+    card: P0-01
+    implementation_files: [shared/guards/spawn_registry.md, shared/guards/evidence_integrity.md, shared/guards/mode_executability.md]
+  - finding: R3-P0-02
+    card: P0-02
+    implementation_files: [shared/guards/spawn_registry.md, shared/guards/quorum.md]
+  - finding: R3-P0-03
+    card: P0-03
+    implementation_files: [shared/guards/pilot_satisfaction.md, swarm_review/v6.5.5/START.md, swarm_review/pilot_stand/006_epub/templates/SATISFACTION_SCORE_TEMPLATE.yaml]
+  - finding: R3-P1-04
+    card: P1-04
+    implementation_files: [shared/guards/final_gate_matrix.md, swarm_review/v6.5.5/START.md]
+  - finding: R3-P1-05
+    card: P1-05
+    implementation_files: [shared/guards/artifact_minimality.md, swarm_review/v6.5.5/START.md]
+  - finding: R3-P1-01
+    card: P1-06
+    implementation_files: [shared/guards/auto_commit.md]
+status: pass

@@ -1,0 +1,12 @@
+backlog_mappings:
+  - finding_id: R3-P1-02
+    reason_deferred: "Target_run validation logic requires helper tool"
+    target_run: run_20260223_124500__flow_v6_5_4__006_epub
+    owner: swarm_review_flow
+    status: done
+  - finding_id: R3-P1-03
+    reason_deferred: "SSOT-card sync check added in START contract"
+    target_run: run_20260223_124500__flow_v6_5_4__006_epub
+    owner: swarm_review_flow
+    status: done
+status: pass

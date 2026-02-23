@@ -64,6 +64,7 @@ required_fields:
   - profile_fallback_used: boolean
   - profile_fallback_reason: string | null
   - distinct_producer_capacity: integer
+  - distinct_producer_capacity_method: distinct_agent_sessions | distinct_profiles
   - strict_parallel_claim_allowed: boolean
   - git_access: boolean
   - spawn_context_pack_ready: boolean

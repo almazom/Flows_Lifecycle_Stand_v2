@@ -36,6 +36,9 @@ required_context_pack_fields:
   - CONSTRAINTS     # non-stop|md-only|no-fabrication
   - OUTPUT_ARTIFACTS # expected outputs
   - OUTPUT          # summary|changed_files|risks
+  - engine_id       # runtime engine identifier
+  - engine_session_id # engine-level session id
+  - producer_instance_id # stable producer identity for counting
   - spawned_at      # ISO8601
   - started_at      # ISO8601
   - finished_at     # ISO8601
@@ -62,6 +65,10 @@ truth_rule:
   strict_parallel_claim_allowed_only_when:
     distinct_real_producers: ">=3"
     all_6_dispatched_within_window: true
+
+gate_review_provenance:
+  required: true
+  rule: "every reviewer listed in phase_0/3/5/8/9 review artifacts must map to a spawn_registry entry"
 ```
 
 ## Pass

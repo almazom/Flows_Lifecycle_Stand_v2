@@ -54,6 +54,7 @@ on_violation:
 ```yaml
 topology_truth_report:
   - actual_distinct_producers: integer
+  - distinct_engine_session_pairs: array[string]
   - classification: strict_parallel | strategy_variations
   - fabricated_claims_found: boolean
   - strict_parallel_claim_allowed: boolean
