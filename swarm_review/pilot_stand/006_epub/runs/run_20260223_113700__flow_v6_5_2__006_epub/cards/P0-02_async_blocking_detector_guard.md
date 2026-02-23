@@ -54,7 +54,7 @@ Lines: `191-197`
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
-rg -n "subprocess\.run|async" /home/pets/zoo/006_epub/core /home/pets/zoo/006_epub/bot | head -n 50
+rg -n "subprocess\.run|async" pilot_projects/006_epub/core pilot_projects/006_epub/bot | head -n 50
 ```
 
 ## ⚠️ Risk Assessment

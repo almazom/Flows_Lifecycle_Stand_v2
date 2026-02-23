@@ -4,8 +4,8 @@
 
 This project is used as a pilot workload to evolve `swarm_review` versions.
 
-- Target project path: `/home/pets/zoo/006_epub`
-- Target repo: `https://github.com/almazom/006_epub`
+- Target project path: `pilot_projects/006_epub`
+- Target repo: `pilot_projects/006_epub`
 - Goal: improve flow quality, not project feature delivery.
 
 ## Run Cycle

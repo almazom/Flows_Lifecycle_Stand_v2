@@ -58,7 +58,7 @@ Lines: `150-159`
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
-rg -n "xfail|manual|destructive|.env" /home/pets/zoo/006_epub/tests /home/pets/zoo/006_epub/.github/workflows
+rg -n "xfail|manual|destructive|.env" pilot_projects/006_epub/tests pilot_projects/006_epub/.github/workflows
 ```
 
 ## ⚠️ Risk Assessment
@@ -76,7 +76,7 @@ rg -n "xfail|manual|destructive|.env" /home/pets/zoo/006_epub/tests /home/pets/z
 ```bash
 rg -n "ci_test_safety_gate" swarm_review/v6.5.3/START.md
 test -f swarm_review/v6.5.3/START.md
-rg -n "manual" /home/pets/zoo/006_epub/tests/integration/test_manual_fallback.py
+rg -n "manual" pilot_projects/006_epub/tests/integration/test_manual_fallback.py
 ```
 
 ## 🔄 Rollback

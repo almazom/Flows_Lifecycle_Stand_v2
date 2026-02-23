@@ -3,5 +3,5 @@ checks:
   target_project_exists: true
   write_permissions: true
   shared_resources_available: true
-target_project_path: /home/pets/zoo/006_epub
+target_project_path: pilot_projects/006_epub
 notes: "Environment verified for pilot run"

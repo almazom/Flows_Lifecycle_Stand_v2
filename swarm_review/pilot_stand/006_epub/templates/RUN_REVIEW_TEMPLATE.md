@@ -5,7 +5,7 @@
 - `run_id`: `run_YYYYMMDD_HHMMSS__flow_vX_Y_Z`
 - `date_utc`:
 - `flow_version`:
-- `project_path`: `/home/pets/zoo/006_epub`
+- `project_path`: `pilot_projects/006_epub`
 
 ## Expectations Used
 

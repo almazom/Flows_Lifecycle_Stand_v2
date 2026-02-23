@@ -1,4 +1,4 @@
-project_path: /home/pets/zoo/006_epub
+project_path: pilot_projects/006_epub
 snapshot_utc: "2026-02-23T08:59:58Z"
 inventory:
   total_files: 18402
@@ -9,8 +9,8 @@ risk_signals:
   subprocess_or_shell_usage_markers: 128
   ci_safety_markers: 3
 seed_inputs:
-  - /home/pets/zoo/006_epub/.github/workflows/ci.yml
-  - /home/pets/zoo/006_epub/tests/integration/test_manual_fallback.py
-  - /home/pets/zoo/006_epub/core/summarizer/providers/gemini_cli_provider.py
-  - /home/pets/zoo/006_epub/core/vision/gemini_cli_vision_service.py
-  - /home/pets/zoo/006_epub/bot/handlers/common.py
+  - pilot_projects/006_epub/.github/workflows/ci.yml
+  - pilot_projects/006_epub/tests/integration/test_manual_fallback.py
+  - pilot_projects/006_epub/core/summarizer/providers/gemini_cli_provider.py
+  - pilot_projects/006_epub/core/vision/gemini_cli_vision_service.py
+  - pilot_projects/006_epub/bot/handlers/common.py

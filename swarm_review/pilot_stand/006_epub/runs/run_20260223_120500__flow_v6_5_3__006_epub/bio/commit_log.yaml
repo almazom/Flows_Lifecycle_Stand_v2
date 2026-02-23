@@ -1,33 +1,33 @@
 commits:
   - phase: 0-1
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 61f1d26
     message: "Phase 0-1: Preflight + Bootstrap for run_20260223_120500"
   - phase: 2
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 29a8884
     message: "Phase 2: 6 scouts parallel reports for run_20260223_120500"
   - phase: 3
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 40d4a92
     message: "Phase 3: Fusion P0/P1/P2 for run_20260223_120500"
   - phase: 4a-4b
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 69e45d9
     message: "Phase 4a-4b: Card analysis and card creation for run_20260223_120500"
   - phase: 5
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 920562c
     message: "Phase 5: FCT quality validation for run_20260223_120500"
   - phase: 6-7
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 30bbdfb
     message: "Phase 6-7: SSOT freeze and readiness for run_20260223_120500"
   - phase: 8
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 6959c42
     message: "Phase 8: Implement residual-gap hardening and cut v6.5.4 from run_20260223_120500"
   - phase: 9
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 4997251
     message: "Phase 9: COMPLETE_WITH_LIMITATIONS for run_20260223_120500"

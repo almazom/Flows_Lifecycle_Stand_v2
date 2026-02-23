@@ -1,5 +1,5 @@
 expected_version: "6.5.2"
-resolved_start_path: "/home/pets/Flows_Lifecycle_Stand_v2/swarm_review/v6.5.2/START.md"
+resolved_start_path: "./swarm_review/v6.5.2/START.md"
 flow_version_match: true
 guards_root_valid: true
 templates_root_valid: true

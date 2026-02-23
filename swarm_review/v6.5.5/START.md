@@ -450,6 +450,7 @@ status: pass | fail
 | Evolution Regression | ../../shared/guards/evolution_regression.md | No logic degradation |
 | Artifact Minimality | ../../shared/guards/artifact_minimality.md | Core artifact set |
 | Flow Version Lock | ../../shared/guards/flow_version_lock.md | Version validation |
+| Portable Standalone | ../../shared/guards/portable_standalone.md | No external links or absolute paths |
 
 ---
 
@@ -523,6 +524,7 @@ changes_from_6_5_4:
   - hard-20: gate reviewer provenance binding to spawn registry required
   - hard-21: final gate matrix schema guard introduced
   - hard-22: phase-9 stable_promotion_gate made mandatory
+  - hard-23: portable-standalone guard added (external links/absolute paths forbidden)
 
 next_patch: 6.5.6
 next_minor: 6.6

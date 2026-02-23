@@ -19,7 +19,7 @@ entries:
     BIO_CASTE: scout
     ROLE: architecture_boundaries
     GOAL: "Find architecture boundary and coupling risks"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/architecture_boundaries/report.md"]
     OUTPUT: summary
@@ -33,7 +33,7 @@ entries:
     BIO_CASTE: scout
     ROLE: reliability_error_handling
     GOAL: "Find reliability and exception handling risks"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/reliability_error_handling/report.md"]
     OUTPUT: summary
@@ -47,7 +47,7 @@ entries:
     BIO_CASTE: scout
     ROLE: testing_ci_quality
     GOAL: "Find CI and test reliability issues"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/testing_ci_quality/report.md"]
     OUTPUT: summary
@@ -61,7 +61,7 @@ entries:
     BIO_CASTE: scout
     ROLE: security_config_surface
     GOAL: "Find security and config risks"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/security_config_surface/report.md"]
     OUTPUT: summary
@@ -75,7 +75,7 @@ entries:
     BIO_CASTE: scout
     ROLE: performance_concurrency
     GOAL: "Find async performance and concurrency issues"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/performance_concurrency/report.md"]
     OUTPUT: summary
@@ -89,7 +89,7 @@ entries:
     BIO_CASTE: scout
     ROLE: maintainability_doc_debt
     GOAL: "Find maintainability and documentation debt"
-    INPUT_ARTIFACTS: ["/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: ["pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/maintainability_doc_debt/report.md"]
     OUTPUT: summary

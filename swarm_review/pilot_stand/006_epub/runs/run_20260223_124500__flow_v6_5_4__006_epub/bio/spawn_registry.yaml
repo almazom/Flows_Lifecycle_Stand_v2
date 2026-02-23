@@ -76,7 +76,7 @@ entries:
   ROLE: producer_counting_model
   GOAL: Close producer counting gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2
+  - .
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/producer_counting_model/report.md
@@ -95,7 +95,7 @@ entries:
   ROLE: gate_spawn_provenance
   GOAL: Close gate spawn provenance gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2
+  - .
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/gate_spawn_provenance/report.md
@@ -114,7 +114,7 @@ entries:
   ROLE: traceability_sync
   GOAL: Close traceability sync gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2
+  - .
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/traceability_sync/report.md
@@ -133,7 +133,7 @@ entries:
   ROLE: auto_commit_runtime_enforcement
   GOAL: Close runtime auto-commit gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2
+  - .
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/auto_commit_runtime_enforcement/report.md
@@ -152,7 +152,7 @@ entries:
   ROLE: stable_scoring_hard_gates
   GOAL: Close stable scoring gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2/swarm_review/pilot_stand/006_epub
+  - swarm_review/pilot_stand/006_epub
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/stable_scoring_hard_gates/report.md
@@ -171,7 +171,7 @@ entries:
   ROLE: final_readiness_consolidation
   GOAL: Close final readiness consolidation gaps
   INPUT_ARTIFACTS:
-  - /home/pets/Flows_Lifecycle_Stand_v2
+  - .
   CONSTRAINTS: non-stop|md-only|no-fabrication
   OUTPUT_ARTIFACTS:
   - reports/expert/final_readiness_consolidation/report.md

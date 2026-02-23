@@ -1,45 +1,45 @@
 commits:
   - phase: 0
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 7f4df3b
     message: "Phase 0: Preflight for run_20260223_124500"
   - phase: 1
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: e211b1e
     message: "Phase 1: Bootstrap for run_20260223_124500"
   - phase: 2
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 858cb6c
     message: "Phase 2: 6 scouts parallel reports for run_20260223_124500"
   - phase: 3
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: c4db346
     message: "Phase 3: Fusion P0/P1/P2 for run_20260223_124500"
   - phase: 4a
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: dd82b94
     message: "Phase 4a: Card analysis for run_20260223_124500"
   - phase: 4b
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: e472c38
     message: "Phase 4b: Card creation for run_20260223_124500"
   - phase: 5
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: c7f2b3b
     message: "Phase 5: FCT quality validation for run_20260223_124500"
   - phase: 6
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: cbc406a
     message: "Phase 6: SSOT freeze for run_20260223_124500"
   - phase: 7
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: e675723
     message: "Phase 7: Implementation readiness for run_20260223_124500"
   - phase: 8
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: a4e41a8
     message: "Phase 8: Implement final stable gates and cut v6.5.5 from run_20260223_124500"
   - phase: 9
-    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    repo: .
     commit_sha: 2573b4c
     message: "Phase 9: bind final PASS reviewers to quorum provenance for run_20260223_124500"

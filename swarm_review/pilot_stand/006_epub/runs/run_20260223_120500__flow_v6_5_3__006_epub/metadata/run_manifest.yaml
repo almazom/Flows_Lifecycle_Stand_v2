@@ -5,6 +5,6 @@ selected_mode: implementation
 analysis_only_explicit_opt_in: false
 started_at_utc: "2026-02-23T08:59:58Z"
 target_project:
-  path: /home/pets/zoo/006_epub
-  repo: https://github.com/almazom/006_epub
+  path: pilot_projects/006_epub
+  repo: pilot_projects/006_epub
   branch: master

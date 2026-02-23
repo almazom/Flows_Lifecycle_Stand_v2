@@ -53,7 +53,7 @@ schema_validated: true
 
 bash
 set -euo pipefail
-rg -n "schema|stable|spawn|quorum|hard-fail" /home/pets/Flows_Lifecycle_Stand_v2/shared/guards /home/pets/Flows_Lifecycle_Stand_v2/swarm_review/v6.5.5/START.md
+rg -n "schema|stable|spawn|quorum|hard-fail" ./shared/guards ./swarm_review/v6.5.5/START.md
 
 ## ⚠️ Risk Assessment
 | Risk | Level | Mitigation |
@@ -69,9 +69,9 @@ rg -n "schema|stable|spawn|quorum|hard-fail" /home/pets/Flows_Lifecycle_Stand_v2
 ## 🧪 Verification (≥3 commands)
 
 bash
-test -f /home/pets/Flows_Lifecycle_Stand_v2/swarm_review/v6.5.5/START.md
-rg -n "stable_promotion_gate|schema_validated" /home/pets/Flows_Lifecycle_Stand_v2/swarm_review/v6.5.5/START.md
-rg -n "producer_instance_id|engine_session_id" /home/pets/Flows_Lifecycle_Stand_v2/shared/guards/spawn_registry.md
+test -f ./swarm_review/v6.5.5/START.md
+rg -n "stable_promotion_gate|schema_validated" ./swarm_review/v6.5.5/START.md
+rg -n "producer_instance_id|engine_session_id" ./shared/guards/spawn_registry.md
 
 ## 🔄 Rollback
 

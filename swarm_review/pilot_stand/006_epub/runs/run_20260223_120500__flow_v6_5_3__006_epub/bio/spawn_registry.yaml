@@ -16,7 +16,7 @@ entries:
     BIO_CASTE: scout
     ROLE: quorum_parallelism
     GOAL: "Find quorum and parallel evidence gaps"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2", "/home/pets/zoo/006_epub"]
+    INPUT_ARTIFACTS: [".", "pilot_projects/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/quorum_parallelism/report.md"]
     OUTPUT: summary
@@ -30,7 +30,7 @@ entries:
     BIO_CASTE: scout
     ROLE: evidence_integrity
     GOAL: "Find evidence integrity gaps"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    INPUT_ARTIFACTS: ["."]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/evidence_integrity/report.md"]
     OUTPUT: summary
@@ -44,7 +44,7 @@ entries:
     BIO_CASTE: scout
     ROLE: auto_commit_discipline
     GOAL: "Find auto-commit contract drift"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    INPUT_ARTIFACTS: ["."]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/auto_commit_discipline/report.md"]
     OUTPUT: summary
@@ -58,7 +58,7 @@ entries:
     BIO_CASTE: scout
     ROLE: worker_traceability
     GOAL: "Find req-card-code chain gaps"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    INPUT_ARTIFACTS: ["."]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/worker_traceability/report.md"]
     OUTPUT: summary
@@ -72,7 +72,7 @@ entries:
     BIO_CASTE: scout
     ROLE: gate_review_integrity
     GOAL: "Find gate review proof gaps"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2"]
+    INPUT_ARTIFACTS: ["."]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/gate_review_integrity/report.md"]
     OUTPUT: summary
@@ -86,7 +86,7 @@ entries:
     BIO_CASTE: scout
     ROLE: stable_promotion_readiness
     GOAL: "Find stable readiness blockers"
-    INPUT_ARTIFACTS: ["/home/pets/Flows_Lifecycle_Stand_v2/swarm_review/pilot_stand/006_epub"]
+    INPUT_ARTIFACTS: ["swarm_review/pilot_stand/006_epub"]
     CONSTRAINTS: "non-stop|md-only|no-fabrication"
     OUTPUT_ARTIFACTS: ["reports/expert/stable_promotion_readiness/report.md"]
     OUTPUT: summary

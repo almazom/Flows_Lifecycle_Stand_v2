@@ -61,7 +61,7 @@ p2:
     title: pilot_dod_missing_explicit_quorum_artifact_requirement
     sources: [quorum_parallelism]
     evidence:
-      - /home/pets/zoo/006_epub/docs/flow_pilot/GITFLOW_PILOT.md:5
+      - pilot_projects/006_epub/docs/flow_pilot/GITFLOW_PILOT.md:5
       - shared/guards/quorum.md:15
 
 mapping_completeness:

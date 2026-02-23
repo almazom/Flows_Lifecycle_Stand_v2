@@ -1,7 +1,7 @@
 pilot_project:
   name: 006_epub
-  path: /home/pets/zoo/006_epub
-  repo: https://github.com/almazom/006_epub
+  path: pilot_projects/006_epub
+  repo: pilot_projects/006_epub
   baseline_tag: pilot-baseline-2026-02-23
 runs:
 - run_id: bootstrap_2026-02-23
