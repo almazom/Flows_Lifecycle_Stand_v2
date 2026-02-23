@@ -1,0 +1,34 @@
+p0:
+  - id: R3-P0-01
+    title: session_backed_producer_counting_and_threshold_gate
+    evidence: [shared/guards/spawn_registry.md:28, shared/guards/evidence_integrity.md:26]
+  - id: R3-P0-02
+    title: gate_reviewer_spawn_provenance_enforcement
+    evidence: [shared/agents/INDEX.md:75, shared/guards/spawn_registry.md:21]
+  - id: R3-P0-03
+    title: stable_promotion_gate_mandatory_in_phase9
+    evidence: [shared/guards/pilot_satisfaction.md:24, swarm_review/v6.5.4/START.md:420]
+
+p1:
+  - id: R3-P1-01
+    title: auto_commit_runtime_pending_sha_block
+    evidence: [shared/guards/auto_commit.md:34, shared/guards/auto_commit.md:83]
+  - id: R3-P1-02
+    title: traceability_backlog_target_run_validation
+    evidence: [swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml:7]
+  - id: R3-P1-03
+    title: ssot_card_status_sync_hard_check
+    evidence: [swarm_review/v6.5.4/START.md:379]
+  - id: R3-P1-04
+    title: final_gate_matrix_schema_contract
+    evidence: [swarm_review/v6.5.4/START.md:404]
+  - id: R3-P1-05
+    title: mandatory_core_add_final_gate_evidence
+    evidence: [shared/guards/artifact_minimality.md:42]
+
+p2: []
+mapping_completeness:
+  raw_findings_count: 18
+  deduplicated_issues_count: 8
+  raw_to_dedup_mapped: true
+status: pass

@@ -14,6 +14,10 @@ phases:
     status: pass
     artifact_refs: [reports/expert/producer_counting_model/report.md, reports/expert/gate_spawn_provenance/report.md, reports/expert/traceability_sync/report.md, reports/expert/auto_commit_runtime_enforcement/report.md, reports/expert/stable_scoring_hard_gates/report.md, reports/expert/final_readiness_consolidation/report.md, bio/spawn_registry.yaml]
     note: "6 experts dispatched for final gap closure"
+  - phase_id: "3"
+    status: pass
+    artifact_refs: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml, reports/execution/reviews/phase_3_fusion_review.yaml]
+    note: "Final blockers fused"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
