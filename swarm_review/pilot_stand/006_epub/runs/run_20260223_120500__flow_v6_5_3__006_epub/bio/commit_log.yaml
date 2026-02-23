@@ -29,5 +29,5 @@ commits:
     message: "Phase 8: Implement residual-gap hardening and cut v6.5.4 from run_20260223_120500"
   - phase: 9
     repo: /home/pets/Flows_Lifecycle_Stand_v2
-    commit_sha: pending_after_phase9_commit
+    commit_sha: 4997251
     message: "Phase 9: COMPLETE_WITH_LIMITATIONS for run_20260223_120500"
