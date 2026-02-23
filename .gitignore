@@ -1,0 +1,27 @@
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temp
+tmp/
+temp/
+.cache/
+
+# Node (if needed later)
+node_modules/
+
+# Python (if needed later)
+__pycache__/
+*.pyc
+.venv/
+venv/
