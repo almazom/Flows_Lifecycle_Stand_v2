@@ -1,0 +1,31 @@
+traceability:
+  - finding: SE-01
+    card: P0-01
+    implementation_files:
+      - shared/guards/evidence_integrity.md
+      - swarm_review/v6.5.3/START.md
+  - finding: PE-01
+    card: P0-02
+    implementation_files:
+      - swarm_review/v6.5.3/START.md
+  - finding: TS-01
+    card: P1-03
+    implementation_files:
+      - shared/guards/ci_test_safety.md
+      - swarm_review/v6.5.3/START.md
+  - finding: AR-03
+    card: P1-04
+    implementation_files:
+      - shared/guards/mode_executability.md
+      - swarm_review/v6.5.3/START.md
+  - finding: MA-02
+    card: P1-05
+    implementation_files:
+      - shared/guards/pilot_satisfaction.md
+      - swarm_review/pilot_stand/006_epub/templates/SATISFACTION_SCORE_TEMPLATE.yaml
+  - finding: MA-04
+    card: P2-06
+    implementation_files:
+      - swarm_review/pilot_stand/006_epub/STABLE_REGISTRY.md
+      - swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml
+status: pass

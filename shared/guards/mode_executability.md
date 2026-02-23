@@ -49,15 +49,20 @@ modes:
 ```yaml
 preflight_check:
   - detect: available_agents
+  - detect: agent_profile_health
   - detect: git_access
   - detect: write_permissions
   - resolve: mode (analysis_only | implementation)
+  - resolve: expert_profile_fallback_order [explorer, default, worker]
   - deny: impossible_claims_upfront
 
 required_fields:
   - selected_mode: analysis_only | implementation
   - analysis_only_explicit_opt_in: boolean
   - available_agents: array[string]
+  - active_profile_per_role: map[string,string]
+  - profile_fallback_used: boolean
+  - profile_fallback_reason: string | null
   - distinct_producer_capacity: integer
   - strict_parallel_claim_allowed: boolean
   - git_access: boolean

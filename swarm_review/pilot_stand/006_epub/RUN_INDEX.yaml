@@ -12,5 +12,7 @@ runs:
     status: "completed"
     satisfaction: 100
     confidence: 100
+    stable_candidate: false
+    stable_decision: "not_applicable"
+    evidence_ref: "swarm_review/pilot_stand/006_epub/RUN_INDEX.yaml"
     notes: "Git history reset, new repo created, pilot stand initialized."
-

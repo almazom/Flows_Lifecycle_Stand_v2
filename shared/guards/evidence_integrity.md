@@ -25,6 +25,11 @@ hard_rules:
   - no_claim_without_artifact: true
   - no_distinct_producer_claim_without_distinct_engine_session_pairs: true
   - no_simulated_pr_claim_without_pr_url: true
+  - no_plaintext_secret_in_run_artifacts: true
+
+preflight_secret_gate:
+  required: true
+  block_on_detected_plaintext_secret: true
 
 topology_rules:
   strict_parallel_min_distinct_producers: 3
