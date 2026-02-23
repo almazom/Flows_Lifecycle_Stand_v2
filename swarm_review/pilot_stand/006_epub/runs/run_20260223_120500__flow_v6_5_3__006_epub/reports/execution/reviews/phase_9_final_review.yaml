@@ -1,0 +1,8 @@
+phase: 9
+decision_point: final_readiness_decision
+reviewers: [codex_primary, worker_agent_A, worker_agent_B]
+status: pass
+terminal_status: COMPLETE_WITH_LIMITATIONS
+limitations:
+  - "Distinct producers remain at 2; strict_parallel not claimable"
+  - "Stable threshold (>=95/95) not yet reached"

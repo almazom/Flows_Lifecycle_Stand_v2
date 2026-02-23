@@ -1,4 +1,4 @@
-last_completed_phase: phase_8
-next_phase: phase_9
+last_completed_phase: phase_9
+next_phase: null
 continue_without_user_input: true
 blocked_reason: null

@@ -1,0 +1,9 @@
+gates:
+  evolution_regression_gate: pass
+  non_stop_continuity_gate: pass
+  step_coverage_gate: pass
+  evidence_integrity_gate: pass
+  card_quality_95_gate: pass
+  decision_gate_parallel_review_gate: pass
+  flow_version_lock_gate: pass
+status: pass

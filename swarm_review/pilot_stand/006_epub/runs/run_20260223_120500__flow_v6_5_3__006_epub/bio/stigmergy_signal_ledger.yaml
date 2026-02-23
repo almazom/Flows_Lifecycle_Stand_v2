@@ -1,0 +1,6 @@
+signals:
+  - signal: step_coverage_false_pass
+    source: reports/expert/evidence_integrity/report.md
+  - signal: quorum_schema_gap
+    source: reports/expert/gate_review_integrity/report.md
+status: pass

@@ -13,3 +13,4 @@ Version is marked `Stable` only when:
 | Date | Flow Version | Satisfaction | Confidence | Decision | Evidence |
 |------|--------------|--------------|------------|----------|----------|
 | 2026-02-23 | - | - | - | Not yet evaluated | `RUN_INDEX.yaml` |
+| 2026-02-23 | v6.5.4 | 94 | 94 | Not Stable | `run_20260223_120500__flow_v6_5_3__006_epub` |

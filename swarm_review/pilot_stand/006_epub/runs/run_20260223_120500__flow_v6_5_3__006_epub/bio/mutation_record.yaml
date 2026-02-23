@@ -1,0 +1,5 @@
+mutations:
+  - version_from: 6.5.3
+    version_to: 6.5.4
+    reason: "Residual gap hardening from run #2 fusion"
+    status: applied

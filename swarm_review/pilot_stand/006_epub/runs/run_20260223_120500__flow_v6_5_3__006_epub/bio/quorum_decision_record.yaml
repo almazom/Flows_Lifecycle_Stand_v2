@@ -1,0 +1,56 @@
+decisions:
+  - point_id: preflight_decision
+    phase_id: "0"
+    decision_question: "Is environment ready to run?"
+    input_artifacts: [reports/preflight/environment_gate_report.yaml, reports/preflight/flow_version_lock_report.yaml]
+    spawned_agents: [codex_primary, worker_agent_A, worker_agent_B]
+    agent_outputs: [reports/execution/reviews/phase_0_preflight_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 96
+    classification: strategy_variations
+    quorum_met: true
+    status: pass
+  - point_id: fusion_decision
+    phase_id: "3"
+    decision_question: "Is P0/P1/P2 prioritization correct?"
+    input_artifacts: [reports/fusion/fusion_report.md, reports/fusion/priorities_p0_p1_p2.yaml]
+    spawned_agents: [codex_primary, worker_agent_A, worker_agent_B]
+    agent_outputs: [reports/execution/reviews/phase_3_fusion_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 95
+    classification: strategy_variations
+    quorum_met: true
+    status: pass
+  - point_id: quality_95_validation
+    phase_id: "5"
+    decision_question: "Do cards meet 95% FCT confidence?"
+    input_artifacts: [reports/quality/card_quality_fct.yaml]
+    spawned_agents: [codex_primary, nurse_agent_A, nurse_agent_B]
+    agent_outputs: [reports/execution/reviews/phase_5_quality_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 95
+    classification: strategy_variations
+    quorum_met: true
+    status: pass
+  - point_id: implementation_decision
+    phase_id: "8"
+    decision_question: "Are all cards implemented correctly?"
+    input_artifacts: [reports/execution/requirements_traceability.yaml, reports/execution/requirements_backlog_traceability.yaml]
+    spawned_agents: [codex_primary, worker_agent_A, worker_agent_B]
+    agent_outputs: [reports/execution/reviews/phase_8_implementation_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 95
+    classification: strategy_variations
+    quorum_met: true
+    status: pass
+  - point_id: final_readiness_decision
+    phase_id: "9"
+    decision_question: "Is terminal state valid?"
+    input_artifacts: [reports/execution/gate_review_swarm_matrix.yaml, bio/step_coverage_report.yaml]
+    spawned_agents: [codex_primary, worker_agent_A, worker_agent_B]
+    agent_outputs: [reports/execution/reviews/phase_9_final_review.yaml]
+    consolidated_verdict: pass
+    confidence_percent: 94
+    classification: strategy_variations
+    quorum_met: true
+    status: pass
