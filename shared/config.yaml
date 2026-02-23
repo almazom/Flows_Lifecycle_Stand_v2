@@ -24,6 +24,15 @@ auto_commit:
   on_fail: block_phase          # hard block — no phase transition with uncommitted files
   branch_per_run: true          # feature/swarm-review-YYYYMMDD
 
+pr_review:
+  mode: human                   # auto | human
+  reviewer_agents_min: 3
+  auto:
+    run_checks: true
+    require_pr_ready_gate: true
+  human:
+    system_claims_final_review: false
+
 modes:
   full: { workers: 3 }
   balanced: { workers: 2 }

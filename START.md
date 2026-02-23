@@ -48,6 +48,7 @@ Flows_Lifecycle_Stand_v2/
 │   ├── v6.5.3/
 │   ├── v6.5.4/
 │   ├── v6.5.5/
+│   ├── v6.5.6/           ← Draft: PR-review policy split (not current)
 │   └── pilot_stand/       ← Pilot evolution bench (006_epub)
 │
 ├── feature_sdd/          ← Flow 2: Feature development (FUTURE)
