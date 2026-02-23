@@ -1,0 +1,51 @@
+total_tasks: 30
+estimated_cards: 6
+cards_preview:
+  - id: P0-01
+    title: secret_leak_preflight_gate
+    priority: P0
+    complexity_hours: 2.5
+    split_from: null
+    depends_on: []
+    domain: security_config_surface
+    source_findings: [SE-01]
+  - id: P0-02
+    title: async_blocking_detector_guard
+    priority: P0
+    complexity_hours: 3.0
+    split_from: null
+    depends_on: []
+    domain: performance_concurrency
+    source_findings: [PE-01, PE-02]
+  - id: P1-03
+    title: ci_manual_test_safety_gate
+    priority: P1
+    complexity_hours: 2.0
+    split_from: null
+    depends_on: []
+    domain: testing_ci_quality
+    source_findings: [TS-01, TS-02, TS-03]
+  - id: P1-04
+    title: expert_profile_fallback_contract
+    priority: P1
+    complexity_hours: 1.5
+    split_from: null
+    depends_on: [P0-02]
+    domain: mode_executability
+    source_findings: [AR-03]
+  - id: P1-05
+    title: pilot_satisfaction_scoring_guard
+    priority: P1
+    complexity_hours: 2.5
+    split_from: null
+    depends_on: [P1-03]
+    domain: pilot_stand
+    source_findings: [MA-02, TS-05]
+  - id: P2-06
+    title: stable_promotion_contract
+    priority: P2
+    complexity_hours: 1.5
+    split_from: null
+    depends_on: [P1-05]
+    domain: pilot_stand
+    source_findings: [MA-03, MA-04]

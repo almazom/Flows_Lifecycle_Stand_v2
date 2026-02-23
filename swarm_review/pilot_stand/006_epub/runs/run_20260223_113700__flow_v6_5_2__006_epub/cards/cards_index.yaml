@@ -1,0 +1,32 @@
+cards:
+  - id: P0-01
+    file: cards/P0-01_secret_leak_preflight_gate.md
+    priority: P0
+    complexity_hours: 2.5
+    score_15pt: 14
+  - id: P0-02
+    file: cards/P0-02_async_blocking_detector_guard.md
+    priority: P0
+    complexity_hours: 3.0
+    score_15pt: 14
+  - id: P1-03
+    file: cards/P1-03_ci_manual_test_safety_gate.md
+    priority: P1
+    complexity_hours: 2.0
+    score_15pt: 13
+  - id: P1-04
+    file: cards/P1-04_expert_profile_fallback_contract.md
+    priority: P1
+    complexity_hours: 1.5
+    score_15pt: 13
+  - id: P1-05
+    file: cards/P1-05_pilot_satisfaction_scoring_guard.md
+    priority: P1
+    complexity_hours: 2.5
+    score_15pt: 14
+  - id: P2-06
+    file: cards/P2-06_stable_promotion_contract.md
+    priority: P2
+    complexity_hours: 1.5
+    score_15pt: 13
+status: pass
