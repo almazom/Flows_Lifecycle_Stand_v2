@@ -44,7 +44,8 @@ Flows_Lifecycle_Stand_v2/
 │   ├── current → v6.5.2/  ← Symlink to latest
 │   ├── v6.5/
 │   ├── v6.5.1/
-│   └── v6.5.2/
+│   ├── v6.5.2/
+│   └── pilot_stand/       ← Pilot evolution bench (006_epub)
 │
 ├── feature_sdd/          ← Flow 2: Feature development (FUTURE)
 │   └── current → v1.0/

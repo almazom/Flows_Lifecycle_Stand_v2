@@ -1,0 +1,16 @@
+pilot_project:
+  name: "006_epub"
+  path: "/home/pets/zoo/006_epub"
+  repo: "https://github.com/almazom/006_epub"
+  baseline_tag: "pilot-baseline-2026-02-23"
+
+runs:
+  - run_id: "bootstrap_2026-02-23"
+    date_utc: "2026-02-23T11:00:00Z"
+    flow_version: "setup"
+    run_type: "git_reset_and_stand_bootstrap"
+    status: "completed"
+    satisfaction: 100
+    confidence: 100
+    notes: "Git history reset, new repo created, pilot stand initialized."
+

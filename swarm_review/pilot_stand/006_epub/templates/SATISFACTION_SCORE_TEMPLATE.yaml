@@ -1,0 +1,36 @@
+run_id: "run_YYYYMMDD_HHMMSS__flow_vX_Y_Z"
+flow_version: "vX.Y.Z"
+project: "006_epub"
+
+scoring:
+  e01_separate_run_folder: 0
+  e02_six_experts_parallel: 0
+  e03_fusion_p0_p1_p2: 0
+  e04_cards_1_to_4_hours_split: 0
+  e05_quality_95: 0
+  e06_ssot_json_truth: 0
+  e07_non_stop_terminal: 0
+  e08_multi_engine: 0
+  e09_honest_topology: 0
+  e10_req_cards_code_chain: 0
+  e11_russian_report: 0
+  e12_no_fabrication: 0
+  e13_parallel_gate_review: 0
+  e14_min_3_agents_gate: 0
+  e15_stigmergy_coordination: 0
+  e16_quorum_2_of_3: 0
+  e17_mycelial_links: 0
+  e18_role_differentiation: 0
+  e19_mutation_on_failure: 0
+  e20_auto_commit_per_phase: 0
+  e21_template_15_points: 0
+  e22_dynamic_agent_selection: 0
+
+aggregation:
+  expectation_score_percent: 0
+  satisfaction_score_percent: 0
+  confidence_score_percent: 0
+  stable_candidate: false
+
+notes: ""
+
