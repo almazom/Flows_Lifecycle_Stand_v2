@@ -1,0 +1,11 @@
+phase: 0
+decision_point: preflight_decision
+reviewers:
+  - 019c89d3-9615-7013-8158-2f53180f5dfb
+  - 019c89d3-9779-7f11-85a6-db0339a37804
+  - 019c89d3-9e47-7740-a7b5-b97a73f97082
+reviewer_outputs:
+  - "PASS: all five preflight reports have status pass with mitigations"
+  - "PASS: non-blocking risks documented"
+  - "PASS: independent validation confirms preflight readiness"
+status: pass

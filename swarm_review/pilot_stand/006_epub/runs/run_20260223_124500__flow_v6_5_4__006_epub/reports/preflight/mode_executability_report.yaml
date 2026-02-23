@@ -1,0 +1,14 @@
+selected_mode: implementation
+analysis_only_explicit_opt_in: false
+available_agents: [default, worker]
+active_profile_per_role:
+  scout: default
+  worker: worker
+profile_fallback_used: true
+profile_fallback_reason: "explorer unavailable; session-based producer model enabled"
+distinct_producer_capacity: 6
+distinct_producer_capacity_method: distinct_agent_sessions
+strict_parallel_claim_allowed: true
+git_access: true
+spawn_context_pack_ready: true
+status: pass

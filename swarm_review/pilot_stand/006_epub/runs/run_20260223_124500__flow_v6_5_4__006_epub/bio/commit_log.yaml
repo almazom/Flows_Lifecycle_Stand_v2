@@ -1,0 +1,5 @@
+commits:
+  - phase: 0
+    repo: /home/pets/Flows_Lifecycle_Stand_v2
+    commit_sha: pending
+    message: "Phase 0: Preflight ✓ run_20260223_124500"

@@ -1,0 +1,52 @@
+phase_1_expert_selection:
+  selected_domains: []
+  ranking_model: pending
+  selection_rationale: pending
+  fallback_domains: []
+entries:
+  - SUBAGENT: default
+    TASK_ID: run_20260223_124500_preflight_reviewer_1
+    PHASE: "0"
+    BIO_CASTE: scout
+    ROLE: preflight_reviewer
+    GOAL: "Validate preflight gates"
+    INPUT_ARTIFACTS: ["reports/preflight/*.yaml"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/execution/reviews/phase_0_preflight_review.yaml"]
+    OUTPUT: summary
+    agent_id: "019c89d3-9615-7013-8158-2f53180f5dfb"
+    spawned_at: "2026-02-23T12:28:00Z"
+    started_at: "2026-02-23T12:28:01Z"
+    finished_at: "2026-02-23T12:28:34Z"
+  - SUBAGENT: worker
+    TASK_ID: run_20260223_124500_preflight_reviewer_2
+    PHASE: "0"
+    BIO_CASTE: scout
+    ROLE: preflight_reviewer
+    GOAL: "Validate preflight gates"
+    INPUT_ARTIFACTS: ["reports/preflight/*.yaml"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/execution/reviews/phase_0_preflight_review.yaml"]
+    OUTPUT: summary
+    agent_id: "019c89d3-9779-7f11-85a6-db0339a37804"
+    spawned_at: "2026-02-23T12:28:00Z"
+    started_at: "2026-02-23T12:28:01Z"
+    finished_at: "2026-02-23T12:28:26Z"
+  - SUBAGENT: default
+    TASK_ID: run_20260223_124500_preflight_reviewer_3
+    PHASE: "0"
+    BIO_CASTE: scout
+    ROLE: preflight_reviewer
+    GOAL: "Validate preflight gates"
+    INPUT_ARTIFACTS: ["reports/preflight/*.yaml"]
+    CONSTRAINTS: "non-stop|md-only|no-fabrication"
+    OUTPUT_ARTIFACTS: ["reports/execution/reviews/phase_0_preflight_review.yaml"]
+    OUTPUT: summary
+    agent_id: "019c89d3-9e47-7740-a7b5-b97a73f97082"
+    spawned_at: "2026-02-23T12:28:01Z"
+    started_at: "2026-02-23T12:28:02Z"
+    finished_at: "2026-02-23T12:28:34Z"
+parallel_dispatch_evidence:
+  dispatch_window_seconds: 1
+  all_6_dispatched_within_window: false
+  overlapping_runtime_pairs: 3

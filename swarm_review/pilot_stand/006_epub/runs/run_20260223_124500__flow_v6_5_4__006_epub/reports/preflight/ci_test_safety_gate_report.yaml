@@ -1,0 +1,6 @@
+status: pass
+destructive_tests_detected: 1
+unmarked_manual_tests_detected: 1
+env_mutation_tests_detected: 1
+mitigation:
+  - "Blocked from default CI recommendation set"
