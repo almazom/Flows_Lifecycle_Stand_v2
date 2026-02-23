@@ -1,0 +1,9 @@
+project_path: /home/pets/zoo/006_epub
+snapshot_utc: "2026-02-23T09:29:29Z"
+inventory:
+  total_files: 18402
+  python_files: 7465
+risk_signals:
+  stable_gap_remaining: 1
+  producer_model_gap: 1
+  traceability_sync_gap: 1

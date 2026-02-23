@@ -1,0 +1,11 @@
+ranking_model: stable_gap_closure_v1
+selection_rationale: "Target final blockers to achieve >=95"
+selected_domains:
+  - producer_counting_model
+  - gate_spawn_provenance
+  - traceability_sync
+  - auto_commit_runtime_enforcement
+  - stable_scoring_hard_gates
+  - final_readiness_consolidation
+fallback_domains: [quorum_parallelism, evidence_integrity]
+exactly_six_selected: true
