@@ -38,8 +38,7 @@ phases:
     note: "P0/P1/P2 fusion completed for all findings"
   - phase_id: "4a"
     status: pass
-    artifact_refs:
-      - cards/card_plan.yaml
+    artifact_refs: [cards/card_plan.yaml]
     note: "Card architecture analysis completed"
   - phase_id: "4b"
     status: pass
@@ -58,6 +57,11 @@ phases:
       - reports/quality/card_quality_fct.yaml
       - reports/execution/reviews/phase_5_quality_review.yaml
     note: "FCT >=95 achieved"
+  - phase_id: "6"
+    status: pass
+    artifact_refs:
+      - ssot/SSOT_KANBAN.json
+    note: "SSOT frozen with 100% release gate"
 all_required_phases_present: false
 no_critical_phase_skipped: true
 status: pass
