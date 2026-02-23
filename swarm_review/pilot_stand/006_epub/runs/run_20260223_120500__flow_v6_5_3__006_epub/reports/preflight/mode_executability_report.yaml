@@ -1,0 +1,13 @@
+selected_mode: implementation
+analysis_only_explicit_opt_in: false
+available_agents: [default, worker]
+active_profile_per_role:
+  scout: default
+  worker: worker
+profile_fallback_used: true
+profile_fallback_reason: "explorer profile unavailable in this runtime"
+distinct_producer_capacity: 2
+strict_parallel_claim_allowed: false
+git_access: true
+spawn_context_pack_ready: true
+status: pass

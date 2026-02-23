@@ -1,0 +1,7 @@
+status: pass
+destructive_tests_detected: 1
+unmarked_manual_tests_detected: 1
+env_mutation_tests_detected: 1
+mitigation:
+  - "Classify as P0/P1 for flow recommendations"
+  - "Do not auto-promote destructive test commands to default CI"

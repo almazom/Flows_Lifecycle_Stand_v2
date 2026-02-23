@@ -1,0 +1,13 @@
+ranking_model: weighted_signal_coverage_v2
+selection_rationale: "Residual risk targeting after run #1 mutation"
+selected_domains:
+  - quorum_parallelism
+  - evidence_integrity
+  - auto_commit_discipline
+  - worker_traceability
+  - gate_review_integrity
+  - stable_promotion_readiness
+fallback_domains:
+  - architecture_boundaries
+  - security_config_surface
+exactly_six_selected: true

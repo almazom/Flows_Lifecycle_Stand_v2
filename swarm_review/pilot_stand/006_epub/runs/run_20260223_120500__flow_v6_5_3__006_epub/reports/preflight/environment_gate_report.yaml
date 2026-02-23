@@ -1,0 +1,5 @@
+status: pass
+checks:
+  target_project_exists: true
+  write_permissions: true
+  shared_resources_available: true
